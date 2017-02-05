@@ -1,0 +1,25 @@
+<script type="text/javascript">
+    var globalInit = function () {
+        var cont = document.getElementsByTagName('head')[0];
+
+        var loadCSS = function (href) {
+            var ss = document.createElement('link');
+            ss.rel = 'stylesheet';
+            ss.href = href;
+            ss.media = 'only x';
+            cont.appendChild(ss);
+            setTimeout(function () {
+                ss.media = 'all';
+            }, 0);
+        }
+        loadCSS('css/style.css');
+
+        var js = document.createElement('script');
+        js.src = 'js/main.js';
+        cont.appendChild(js);
+    }
+
+    if (window.addEventListener) window.addEventListener('load', globalInit, false);
+    else if (window.attachEvent) window.attachEvent('onload', globalInit);
+    else window.onload = globalInit;
+</script>

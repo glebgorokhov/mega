@@ -247,6 +247,8 @@
     	</div>
     </div><!-- /.popup-menu -->
 
+    <!-- Убрать все попапы в соотв. файлы -->
+
 
    <!------------------------------------------------>
    <!--------------------- INDEX -------------------->
@@ -370,7 +372,7 @@
 
 <section class="shopping">
 	<div class="container">
-		<ul class="shopping__sales">
+		<ul class="shopping__cards">
 			<li>
 				<a href="#">
 					<div class="shopping__card-image">
@@ -407,7 +409,9 @@
 						<p class="shopping__card-name">Распродажа в QuikSilver</p>
 						<p class="shopping__card-text">Не успели подготовиться к зимнему сезону, а он уже полностью вступил в свои права? <br>
 						С 20 по 29 января в магазине QuikSilver действует специальная акция «1+1 = 4».</p>
-						<p class="shopping__card-period shopping__card-period_hot"><img src="img/icons/icon_clock.svg" alt="@@" width="18" height="19">3 дня</p>
+						<p class="shopping__card-period shopping__card-period_hot">
+              <!--<img src="img/icons/icon_clock.svg" alt="@@" width="18" height="19"> - :before, бэкграунд-->
+              3 дня</p>
 					</div>
 				</a>
 			</li>
@@ -527,7 +531,11 @@
 					</div>
 				</div>
 				<div class="shopping__scheme">
-					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.86 23.73"><defs><style>.cls-1{fill:none;stroke:#231f20;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.3px;}</style></defs><title>icon_scheme</title><polyline class="cls-1" points="21.24 16.2 23.21 16.57 23.21 1.65 17.19 0.65 11.38 3.3 6.48 1.07 0.65 3.26 0.65 18.18 6.48 15.98 11.16 18.07"/><line class="cls-1" x1="6.86" y1="3.93" x2="6.86" y2="13.4"/><line class="cls-1" x1="11.49" y1="5.77" x2="11.49" y2="9.38"/><line class="cls-1" x1="17.81" y1="3.26" x2="17.81" y2="8.05"/><path class="cls-1" d="M1084.62,1829.33c0,2.27-4.13,8.5-4.13,8.5s-4.13-6.24-4.13-8.5A4.13,4.13,0,0,1,1084.62,1829.33Z" transform="translate(-1064.67 -1814.75)"/><ellipse class="cls-1" cx="15.82" cy="14.27" rx="1.02" ry="1.02"/></svg>
+          <svg viewBox="0 0 23.86 23.73"><use xlink:href="img/svg.svg"></use></svg>
+          <!-- stroke:#231f20; присваиваешь и меняешь -->
+					<!--<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.86 23.73"><defs><style>.cls-1{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.3px;}</style></defs><title>icon_scheme</title><polyline class="cls-1" points="21.24 16.2 23.21 16.57 23.21 1.65 17.19 0.65 11.38 3.3 6.48 1.07 0.65 3.26 0.65 18.18 6.48 15.98 11.16 18.07"/><line class="cls-1" x1="6.86" y1="3.93" x2="6.86" y2="13.4"/><line class="cls-1" x1="11.49" y1="5.77" x2="11.49" y2="9.38"/><line class="cls-1" x1="17.81" y1="3.26" x2="17.81" y2="8.05"/><path class="cls-1" d="M1084.62,1829.33c0,2.27-4.13,8.5-4.13,8.5s-4.13-6.24-4.13-8.5A4.13,4.13,0,0,1,1084.62,1829.33Z" transform="translate(-1064.67 -1814.75)"/><ellipse class="cls-1" cx="15.82" cy="14.27" rx="1.02" ry="1.02"/></svg>-->
+          <!-- <svg><use x="0" y="0" xlink:href="#some_svg_element_id" /></svg> -->
+          <!-- вместо SVG :before, background-image -->
 					<p>Схема МЕГИ</p>
 				</div>
 			</div>
@@ -539,13 +547,18 @@
 
 <section class="activities">
 	<div class="container">
-		<h2 class="activities__largeheading"></h2>
+		<div class="activities__largeheading">
+      <!-- :after - маска с текстом -->
+    </div>
 		<ul class="activities__list">
 			<li class="activities__card activities__card_red">
-				<div class="activities__card-image"><img src="img/icons/icon_popcorn.svg" alt="@@" width="25" height="37"></div>
+				<div class="activities__card-image">
+          <img src="img/icons/icon_popcorn.svg" alt="@@" width="25" height="37">
+          <!-- через svg use -->
+        </div>
 				<p class="activities__card-name">Посмотреть кино</p>
 				<p class="activities__card-text">Все новинки кино в нашем кинотеатре</p>
-				<p class="activities__card-time activities__card-time_red">9:00 — 24:00</p>
+				<p class="activities__card-time">9:00 — 24:00</p>
 				<a href="#" class="button button_bordered activities__button">Раписание сеансов</a>
 			</li>
 			<li class="activities__card activities__card_green">
@@ -566,7 +579,7 @@
 				<div class="activities__card-image"><img src="img/icons/icon_skate.svg" alt="@@" width="45" height="38"></div>
 				<p class="activities__card-name">Покататься на коньках</p>
 				<p class="activities__card-text">Ледовая площадка в любое время года для вас</p>
-				<p class="activities__card-time activities__card-time_blue">8:00 — 23:00</p>
+				<p class="activities__card-time">8:00 — 23:00</p>
 				<a href="#" class="button button_bordered activities__button">Купить билет</a>
 			</li>
 		</ul>
@@ -577,31 +590,46 @@
 
 <section class="megacard">
 	<div class="container">
+    <!-- обернуть во слайдер с враппером -->
 		<div class="megacard__about">
 			<div class="megacard__about-left">
-				<p class="megacard__heading">Копите баллы, <br>получайте бонусы, <br>экономьте</p>
-				<p class="megacard__text">Карта, которой можно расплачиваться<br> во всем мире и получать за покупки<br> бонусные баллы.</p>
+				<div class="megacard__topblock">
+          <p class="megacard__heading">Копите баллы, <br>получайте бонусы, <br>экономьте</p>
+        </div>
+        <!-- Адаптивная картинка тут -->
+				<p class="megacard__text">Карта, которой можно расплачиваться во&nbsp;всем мире и получать за покупки бонусные баллы.</p>
 				<a href="#" class="button button_white megacard__button">Получить карту</a>
 				<a href="#" class="button button_white_bordered megacard__button">Узнать больше о карте</a>
 			</div>
 			<div class="megacard__about-right">
-				<div class="megacard__topblock"><p class="megacard__number">54</p><p class="megacard__rotatedtext">магазина</p><p class="megacard__toptext">принимают<br> бонусные карты</p></div>
-				<p class="megacard__text">Приходите в МЕГУ и тратьте полученные баллы на то, что вам нравится, в магазинах — участниках программы.</p>
+				<div class="megacard__topblock">
+          <p class="megacard__number">54</p>
+          <p class="megacard__rotatedtext">магазина</p>
+          <p class="megacard__toptext">принимают<br> бонусные карты</p>
+        </div>
+        <!-- Адаптивная картинка тут -->
+				<p class="megacard__text">Приходите в МЕГУ и тратьте полученные баллы на то, что вам нравится, в&nbsp;магазинах — участниках программы.</p>
 				<div class="megacard__course">
-					<p><span>1</span><br>балл</p><span>=</span><p class="bordered"><span>1</span><br>рубль</p></div>
+					<p><span>1</span><br>балл</p>
+          <span>=</span>
+          <p class="megacard__course-bordered"><span>1</span><br>рубль</p>
+        </div>
 			</div>
 			<img class="megacard__image" src="img/tmp/hand.png" alt="@@">
 		</div>
+    <!-- // обернуть во слайдер с враппером -->
 		<div class="megacard__slider">
 			<div class="megacard_wrapper">
 				<div class="megacard__slide">
-					<div class="megacard__slide-card">
+          <!-- ССЫЛКАМИ -->
+					<a href="#" class="megacard__slide-card">
 						<div class="megacard__slide-card-image">
 							<img class="megacard__slide-card-bg" src="img/tmp/megacard_slide_1.jpg" alt="@@">
 							<div class="megacard__slide-card-smallimage"><img src="img/tmp/brand_13.jpg" alt="@@"></div>
 						</div>
 						<p class="megacard__slide-card-name">Kira Plastinina</p>
-					</div>
+					</a>
+          <!-- СЛАЙД ЭТО ОДНА КАРТОЧКА, А НЕ 4 -->
 					<div class="megacard__slide-card">
 						<div class="megacard__slide-card-image">
 							<img class="megacard__slide-card-bg" src="img/tmp/megacard_slide_2.jpg" alt="@@">
@@ -640,19 +668,21 @@
 <section class="megastyle">
 	<div class="container">
 		<div class="megastyle__leftside">
-			<p class="megastyle__nametext">Высшая<br> школа<br> шоппинга</p>
-			<div class="megastyle__front">
-				<p class="megastyle__imagetext">Скоро открытие</p>
-			</div>
 			<div class="megastyle__back">
 				<img src="img/tmp/megastyle_1.png" alt="@@">
 				<p class="megastyle__imagetext">Скоро открытие</p>
 			</div>
 		</div>
-		<div class="megastyle__rightside">
+    <div class="megastyle__middle">
+      <p class="megastyle__name">Высшая<br> школа<br> шоппинга</p>
+      <div class="megastyle__front"><!-- отрицательный margin-left -->
+				<p class="megastyle__imagetext">Скоро открытие</p>
+			</div>
+    </div>
+		<div class="megastyle__rightside"><!-- Карточка выравнивается по высоте -->
 			<img class="megastyle__logo" src="img/tmp/logo_megastyle.png" alt="@@">
 			<p class="megastyle__text"><span>МЕГА ТОП 10:</span><br>Звезда вечеринок</p>
-			<img class="megastyle__bg" src="img/tmp/megastyle_2.jpg" alt="@@">
+			<div class="megastyle__bg"><img src="img/tmp/megastyle_2.jpg" alt="@@"></div>
 		</div>
 	</div>
 </section>
@@ -671,6 +701,7 @@
     		</ul>
     		<ul class="footer__social">
     			<li><a href="#">
+            <!-- svg => use -->
     				<svg class="icon_fb" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.25 49.25" width="29" height="29" fill="#d2d5d6"><defs></defs><title>icon_facebook</title><path d="M205.15,228.56a24.62,24.62,0,1,0,24.62,24.63A24.63,24.63,0,0,0,205.15,228.56Zm6.52,24.52H207.4v15.21h-6.32V253.08h-3v-5.37h3v-3.48c0-2.49,1.18-6.38,6.38-6.38l4.68,0v5.21h-3.4a1.29,1.29,0,0,0-1.34,1.46v3.16h4.82Z" transform="translate(-180.52 -228.56)"/></svg>
     			</a></li>
     			<li><a href="#">
@@ -687,12 +718,12 @@
     	<div class="footer__bottom">
     		<p class="footer__copyright">© 2010–2016 «ИКЕА Сентерс Рус Менеджмент»</p>
     		<div class="footer__apps">
-    			<div class="footer__googleapp">
+    			<div class="footer__app footer__app_google">
     				<img src="img/icons/icon_googleplay.png" alt="@@">
     				<p class="footer__apptext">Get it on</p>
     				<p class="footer__appstore">Google Play</p>
     			</div>
-    			<div class="footer__appleapp">
+    			<div class="footer__app footer__app_apple">
     				<img src="img/icons/icon_appstore.svg" alt="@@" width="16" height="29">
     				<p class="footer__apptext">Available on the</p>
     				<p class="footer__appstore">App Store</p>

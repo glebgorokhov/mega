@@ -1,0 +1,14 @@
+// Header
+//------------------------------------------------------------------------------
+
+.header {
+    &-top {
+        //background: $color-white;
+        //border-bottom: 1px solid $color-blue-light;
+        padding: 15px 0 0;
+
+        @include mq(1279px) {
+            padding: 50px;
+        }
+    }
+}

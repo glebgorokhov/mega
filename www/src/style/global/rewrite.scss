@@ -1,0 +1,55 @@
+﻿/*=============================================
+=                   SELECT 2                  =
+=============================================*/
+
+.select2-container--default {
+    display:inline-block;
+    vertical-align:top;
+    width:auto;
+
+    .selection .select2-selection {
+        position:relative;
+        //border:1px solid $color_gray_light;
+        border-radius:2px;
+
+        //&:hover {border-color:$color_gray_light_hover;}
+        //&:focus {border-color:$color_gray_light_hover;}
+
+        &--single {
+            height:auto;
+        }
+
+        .select2-selection__rendered {
+            display:block;
+            width:100%;
+            border:0;
+            border-radius:0;
+            //color:$color_black;
+            font-size:16px;
+            padding:5px 15px;
+            cursor:pointer;
+        }
+
+        .select2-selection__arrow {
+            width:30px;
+            height:100%;
+            //background:url(img/icon_arrow_down.svg) no-repeat 50% 50%;
+
+            b {
+                display:none;
+            }
+        }
+
+        //&:hover .select2-selection__arrow {background-image:url(img/icon_arrow_down_hover.svg);}
+        //&:focus .select2-selection__arrow {background-image:url(img/icon_arrow_down_hover.svg);}
+    }
+
+    .select2-dropdown {
+        border:0;
+        border-radius:0;
+    }
+
+    .select2-results__option--highlighted[aria-selected] {
+        //background-color:$color_red;
+    }
+}

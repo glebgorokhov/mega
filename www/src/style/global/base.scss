@@ -1,0 +1,504 @@
+/*=============================================
+=                   F o n t s                 =
+=============================================*/
+
+//@import url('https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i&subset=cyrillic');
+
+@font-face {
+	font-family: 'PT Astra Sans';
+	src: url('../fonts/PTAstraSans-Regular.eot');
+	src: url('../fonts/PTAstraSans-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSans-Regular.woff') format('woff'),
+		url('../fonts/PTAstraSans-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PT Astra Sans';
+	src: url('../fonts/PTAstraSans-Italic.eot');
+	src: url('../fonts/PTAstraSans-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSans-Italic.woff') format('woff'),
+		url('../fonts/PTAstraSans-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'PT Astra Sans';
+	src: url('../fonts/PTAstraSans-Bold.eot');
+	src: url('../fonts/PTAstraSans-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSans-Bold.woff') format('woff'),
+		url('../fonts/PTAstraSans-Bold.ttf') format('truetype');
+	font-weight: bold;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PT Astra Sans';
+	src: url('../fonts/PTAstraSans-BoldItalic.eot');
+	src: url('../fonts/PTAstraSans-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSans-BoldItalic.woff') format('woff'),
+		url('../fonts/PTAstraSans-BoldItalic.ttf') format('truetype');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'PT Astra Serif';
+	src: url('../fonts/PTAstraSerif-Regular.eot');
+	src: url('../fonts/PTAstraSerif-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSerif-Regular.woff') format('woff'),
+		url('../fonts/PTAstraSerif-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PT Astra Serif';
+	src: url('../fonts/PTAstraSerif-Italic.eot');
+	src: url('../fonts/PTAstraSerif-Italic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSerif-Italic.woff') format('woff'),
+		url('../fonts/PTAstraSerif-Italic.ttf') format('truetype');
+	font-weight: 400;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'PT Astra Serif';
+	src: url('../fonts/PTAstraSerif-Bold.eot');
+	src: url('../fonts/PTAstraSerif-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSerif-Bold.woff') format('woff'),
+		url('../fonts/PTAstraSerif-Bold.ttf') format('truetype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'PT Astra Serif';
+	src: url('../fonts/PTAstraSerif-BoldItalic.eot');
+	src: url('../fonts/PTAstraSerif-BoldItalic.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/PTAstraSerif-BoldItalic.woff') format('woff'),
+		url('../fonts/PTAstraSerif-BoldItalic.ttf') format('truetype');
+	font-weight: 700;
+	font-style: italic;
+}
+
+
+
+$PTAstraSans: 'PT Astra Sans', sans-serif;
+$PTAstraSerif: 'PT Astra Serif', serif;
+//$DinPro: '$DinPro', sans-serif;
+
+
+/*=============================================
+=                  R E S E T                  =
+=============================================*/
+
+*{outline:0;box-sizing:border-box;}
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;vertical-align:baseline;background:transparent;}
+main,article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}
+nav ul{list-style:none;}
+blockquote,q{quotes:none;}
+blockquote:before,blockquote:after,q:before,q:after{content:none;}
+a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}
+ins{background-color:#ff9;color:#000;text-decoration:none;}
+mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}
+del{text-decoration:line-through;}
+abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}
+table{border-collapse:collapse;border-spacing:0;width:100%;}
+hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}
+input,select{vertical-align:middle;}
+
+/*=============================================
+=          Б а з о в ы е   с т и л и          =
+=============================================*/
+
+html {
+    height:auto;
+    color:$color_red;
+    background:#fff;
+    font-family:$PTAstraSans; // kakoi realno nujen
+    font-size:1em;
+    line-height:1.4;
+}
+body {
+    display:block;
+    position:relative;
+}
+
+.wrapper {
+
+}
+
+/*=============================================
+=         H e l p e r   c l a s s e s         =
+=============================================*/
+
+// Text Align
+
+.h-text-center {
+    text-align: center;
+}
+.h-text-right {
+    text-align: right;
+}
+.h-text-left {
+    text-align: left;
+}
+
+// Floats
+
+.h-clear {
+    @include clearfix;
+}
+
+.h-left {
+  float: left;
+}
+
+.h-right {
+  float: right;
+}
+
+// Margins
+
+.h-m0 { margin: 0 !important; }
+.h-mt0 { margin-top: 0 !important; }
+.h-mb0 { margin-bottom: 0 !important; }
+
+.h-m10 { margin: 10px 0; }
+.h-mt10 { margin-top: 10px; }
+.h-mb10 { margin-bottom: 10px; }
+
+.h-m20 { margin: 20px 0; }
+.h-mt20 { margin-top: 20px; }
+.h-mb20 { margin-bottom: 20px; }
+
+.h-m30 { margin: 30px 0; }
+.h-mt30 { margin-top: 30px; }
+.h-mb30 { margin-bottom: 30px; }
+
+
+// Hidden
+//--------------------------------------
+.h-hide {
+    display:none;
+}
+
+.h-show {
+    display:block;
+
+    &__inline {
+        display:inline;
+    }
+
+    &__inline-block {
+        display:inline-block;
+    }
+}
+
+// Adaptiv Helpers
+//--------------------------------------
+.h-mobile-hide {
+    display: none;
+
+    @include mq(767px) {
+        display: block;
+
+        &__inline {
+            display: inline;
+        }
+
+        &__inline-block {
+            display: inline-block;
+        }
+    }
+}
+.h-mobile-show {
+    display: block;
+
+    &__inline {
+        display: inline;
+    }
+
+    &__inline-block {
+        display: inline-block;
+    }
+    
+    @include mq(767px) {
+        display: none;
+    }
+}
+
+.h-tablet-hide {
+    display: none;
+
+    @include mq(1023px) {
+        display: block;
+
+        &__inline {
+            display: inline;
+        }
+
+        &__inline-block {
+            display: inline-block;
+        }
+    }
+}
+.h-tablet-show {
+    display: block;
+
+    &__inline {
+        display: inline;
+    }
+
+    &__inline-block {
+        display: inline-block;
+    }
+    
+    @include mq(1023px) {
+        display: none;
+    }
+}
+
+.h-desktop-wide-hide {
+    display: none;
+
+    @include mq(1279px) {
+        display: block;
+
+        &__inline {
+            display: inline;
+        }
+
+        &__inline-block {
+            display: inline-block;
+        }
+    }
+}
+.h-desktop-wide-show {
+    display: block;
+
+    &__inline {
+        display: inline;
+    }
+
+    &__inline-block {
+        display: inline-block;
+    }
+    
+    @include mq(1279px) {
+        display: none;
+    }
+}
+
+
+/*=============================================
+=            checkboxes, inputs...            =
+=============================================*/
+/*
+input[type=text] {
+    display:block;
+    width:100%;
+    background:$color_white;
+    border:1px solid $color_gray_light;
+    border-radius:2px;
+    font-family:$PTSans;
+    color:$color_black;
+    font-size:16px;
+    padding:6px 10px;
+}
+input[type=text]:hover {
+    border-color:$color_gray_light_hover;
+}
+input[type=text]:focus {
+    border-color:$color_gray_light_hover;
+}
+input[type=text].is-error {
+    border-color:$color_red;
+}
+
+input[type=email] {
+    display:block;
+    width:100%;
+    background:$color_white;
+    border:1px solid $color_gray_light;
+    border-radius:2px;
+    font-family:$PTSans;
+    color:$color_black;
+    font-size:16px;
+    padding:6px 10px;
+    @include transition(border 0.2s);
+}
+input[type=email]:hover {
+    border-color:$color_gray_light_hover;
+}
+input[type=email]:focus {
+    border-color:$color_gray_light_hover;
+}
+input[type=email].is-error {
+    border-color:$color_red;
+}
+
+textarea {
+    display:block;
+    width:100%;
+    min-height:90px;
+    background:$color_white;
+    border:1px solid $color_gray_light;
+    border-radius:2px;
+    font-family:$PTSans;
+    color:$color_black;
+    font-size:16px;
+    padding:6px 10px;
+    @include transition(border 0.2s);
+}
+textarea:hover {
+    border-color:$color_gray_light_hover;
+}
+textarea:focus {
+    border-color:$color_gray_light_hover;
+}
+textarea.is-error {
+    border-color:$color_red;
+}
+
+select {
+    display:inline-block;
+    padding:0 40px 0 0;
+}
+
+.pseudo-select {
+    font-size:14px;
+    cursor:pointer;
+
+    &:after {
+        content:'';
+        display:inline-block;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 5px 2.5px 0 2.5px;
+        border-color: $color_black transparent transparent transparent;
+        margin:0 0 1px 5px;
+    }
+}
+
+form {
+    .field {
+        margin:0 0 1em;
+
+        label {
+            display:block;
+            margin:0 0 1em;
+        }
+    }
+}
+
+.checkbox {position:relative; margin:0 0 3px;
+    input[type=checkbox] {
+        position:absolute;
+        top:0;
+        left:-10px;
+        visibility:hidden;
+        width:0;
+        height:0;
+    }
+    label {
+        position:relative;
+        display:block;
+        padding:0 0 0 30px;
+        vertical-align:middle;
+        cursor:pointer;
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        @include transition(color 0.2s);
+    }
+    input[type=checkbox] + label:before {
+        content:'';
+        position:absolute;
+        top:2px;
+        left:0;
+        width:18px;
+        height:18px;
+        border:2px solid $color_gray_not_light;
+        border-radius:2px;
+        @include transition(background 0.2s, border 0.2s);
+    }
+    input[type=checkbox] + label:hover {
+        color:$color_gray;
+    }
+    input[type=checkbox]:checked + label {
+        //color:$color_gray;
+    }
+    input[type=checkbox]:checked + label:before {
+        border-color:$color_red;
+        background:$color_red url(img/icon_ok_white.svg) no-repeat 50% 50%;
+        background-size:contain;
+    }
+}
+
+.radio {position:relative; margin:0 0 3px;
+    input[type=radio] {
+        position:absolute;
+        top:0;
+        left:-10px;
+        visibility:hidden;
+        width:0;
+        height:0;
+    }
+    label {
+        position:relative;
+        display:block;
+        padding:0 0 0 30px;
+        vertical-align:middle;
+        cursor:pointer;
+        -webkit-touch-callout:none;
+        -webkit-user-select:none;
+        -moz-user-select:none;
+        -ms-user-select:none;
+        user-select:none;
+        @include transition(color 0.2s);
+    }
+    input[type=radio] + label:before {
+        content:'';
+        position:absolute;
+        top:1px;
+        left:0;
+        width:18px;
+        height:18px;
+        border:2px solid $color_gray_not_light;
+        border-radius:100%;
+        @include transition(background 0.2s, border 0.2s);
+    }
+    input[type=radio] + label:after {
+        content:'';
+        position:absolute;
+        top:3px;
+        left:2px;
+        width:14px;
+        height:14px;
+        border:3px solid $color_white;
+        border-radius:100%;
+        opacity:0;
+        @include transition(opacity 0.2s);
+    }
+    input[type=radio] + label:hover {
+        color:$color_gray;
+    }
+    input[type=radio]:checked + label {
+        //color:$color_gray;
+    }
+    input[type=radio]:checked + label:before {
+        border-color:$color_red;
+        background:$color_red;
+    }
+    input[type=radio]:checked + label:after {
+        opacity:1;
+    }
+}
+*/

@@ -32,9 +32,7 @@
     		<a href="#" class="header__logo"><img src="img/tmp/logo_mega.svg" alt="@@" width="146" height="44"></a>
     		<!-- Выбор магазина -->
     		<div class="header__shop-selection">
-    			<select name="shopselect" class="header__shop-select" id="">
-    				<option value="Белая дача">Белая дача</option>
-    			</select>
+    			<p class="header__shop-name">Белая Дача</p>
     			<p class="header__shop-hours">8:00 – 22:00</p>
     		</div>
     		<!-- Верхнее меню -->
@@ -97,21 +95,10 @@
 			</div>
 		</div>
 	</div>
-	<div class="firstscreen__textblock">
-		<div class="firstscreen__text-slider">
-			<div class="firstscreen__text-wrapper">
-				<div class="firstscreen__text-slide">
-					<p class="firstscreen__slide-heading">Local <span>chefs</span> seafood restauraunt</p>
-					<p class="firstscreen__slide-text">Отличная новость для поклонников средиземноморской кухни!</p>
-				</div>
-			</div>
-		</div>
-		<div class="firstscreen__smallimage-slider">
-			<div class="firstscreen__smallimage-wrapper">
-				<div class="firstscreen__smallimage-slide">
-					<img src="img/tmp/slide1_small.jpg" alt="@@">
-				</div>
-			</div>
+	<div class="container">
+		<div class="firstscreen__slider-arrows">
+			<img class="prev" src="img/icons/icon_slidearrow.svg" alt="@@" width="10" height="17">
+			<img class="next" src="img/icons/icon_slidearrow.svg" alt="@@" width="10" height="17">
 		</div>
 		<div class="firstscreen__rotatedtext-slider">
 			<div class="firstscreen__rotatedtext-wrapper">
@@ -120,18 +107,31 @@
 				</div>
 			</div>
 		</div>
+		<div class="firstcreen__textblock">
+			<div class="firstscreen__text-slider">
+				<div class="firstscreen__text-wrapper">
+					<div class="firstscreen__text-slide">
+						<p class="firstscreen__slide-heading">Local <span>chefs</span> seafood restauraunt</p>
+						<p class="firstscreen__slide-text">Отличная новость для поклонников средиземноморской кухни!</p>
+					</div>
+				</div>
+			</div>
+			<div class="firstscreen__smallimage-slider">
+				<div class="firstscreen__smallimage-wrapper">
+					<div class="firstscreen__smallimage-slide">
+						<img src="img/tmp/slide1_small.jpg" alt="@@">
+					</div>
+				</div>
+			</div>
+		</div>
+		<ul class="firstscreen__slider-dots">
+			<li class="dot"></li>
+			<li class="dot active"></li>
+			<li class="dot"></li>
+			<li class="dot"></li>
+			<li class="dot"></li>
+		</ul>
 	</div>
-	<div class="firstscreen__slider-arrows">
-		<img class="prev" src="img/icons/icon_slidearrow.svg" alt="@@" width="10" height="17">
-		<img class="next" src="img/icons/icon_slidearrow.svg" alt="@@" width="10" height="17">
-	</div>
-	<ul class="firstscreen__slider-dots">
-		<li class="dot"></li>
-		<li class="dot active"></li>
-		<li class="dot"></li>
-		<li class="dot"></li>
-		<li class="dot"></li>
-	</ul>
 </section>
 
 <!------------------------------------------------>
@@ -199,108 +199,107 @@
 			<a href="#" class="button button_white">12 событий</a>
 		</div>
 		<div class="shopping__imageblock">
-			<div class="shopping__imagelock-leftside">
-				<div class="shopping__image-slider">
-					<div class="shopping__image-wrapper">
-						<div class="shopping__image-slide">
-							<img src="img/tmp/shopslide_left_1.jpg" alt="@@">
-						</div>
-						<div class="shopping__image-slide">
-							<img src="img/tmp/shopslide_left_2.jpg" alt="@@">
-						</div>
-						<div class="shopping__image-slide">
+			<div class="shopping__imageblock-leftside">
+				<div class="shopping__slider shopping__slider_image">
+					<div class="shopping__wrapper shopping__wrapper_image">
+						<div class="shopping__slide shopping__slide_image">
 							<img src="img/tmp/shopslide_left_3.jpg" alt="@@">
 						</div>
+						<div class="shopping__slide shopping__slide_image">
+							<img src="img/tmp/shopslide_left_1.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_image">
+							<img src="img/tmp/shopslide_left_2.jpg" alt="@@">
+						</div>
 					</div>
 				</div>
-				<div class="shopping__brand-topslider">
-					<div class="shopping__brand-topwrapper">
-						<div class="shopping__brand-topslide">
-							<img src="img/tmp/brand_1.jpg" alt="@@">
-						</div>
-						<div class="shopping__brand-topslide">
-							<img src="img/tmp/brand_5.jpg" alt="@@">
-						</div>
-						<div class="shopping__brand-topslide">
+				<div class="shopping__slider shopping__slider_topbrand">
+					<div class="shopping__wrapper shopping__wrapper_topbrand">
+						<div class="shopping__slide shopping__slide_topbrand">
 							<img src="img/tmp/brand_9.jpg" alt="@@">
 						</div>
+						<div class="shopping__slide shopping__slide_topbrand">
+							<img src="img/tmp/brand_1.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_topbrand">
+							<img src="img/tmp/brand_5.jpg" alt="@@">
+						</div>
 					</div>
 				</div>
-				<div class="shopping__brand-middleslider">
-					<div class="shopping__brand-middlewrapper">
-						<div class="shopping__brand-middleslide">
-							<img src="img/tmp/brand_3.jpg" alt="@@">
-						</div>
-						<div class="shopping__brand-middleslide">
-							<img src="img/tmp/brand_7.jpg" alt="@@">
-						</div>
-						<div class="shopping__brand-middleslide">
+				<div class="shopping__slider shopping__slider_midbrand">
+					<div class="shopping__wrapper shopping__wrapper_midbrand">
+						<div class="shopping__slide shopping__slide_midbrand">
 							<img src="img/tmp/brand_11.jpg" alt="@@">
 						</div>
+						<div class="shopping__slide shopping__slide_midbrand">
+							<img src="img/tmp/brand_3.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_midbrand">
+							<img src="img/tmp/brand_7.jpg" alt="@@">
+						</div>
 					</div>
 				</div>
-				<div class="shopping__brand-bottomslider">
-					<div class="shopping__brand-bottomwrapper">
-						<div class="shopping__brand-bottomslide">
+				<div class="shopping__slider shopping__slider_bottombrand">
+					<div class="shopping__wrapper shopping__wrapper_bottombrand">
+						<div class="shopping__slide shopping__slide_bottombrand">
+							<img src="img/tmp/brand_10.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_bottombrand">
 							<img src="img/tmp/brand_2.jpg" alt="@@">
 						</div>
-						<div class="shopping__brand-bottomslide">
+						<div class="shopping__slide shopping__slide_bottombrand">
 							<img src="img/tmp/brand_6.jpg" alt="@@">
-						</div>
-						<div class="shopping__brand-bottomslide">
-							<img src="img/tmp/brand_10.jpg" alt="@@">
 						</div>
 					</div>
 				</div>
 				<p class="shopping__slide-text"><span>Более 190</span><br>магазинов</p>
 			</div>
-			<div class="shopping__imagelock-rightside">
-				<div class="shopping__image-slider">
-					<div class="shopping__image-wrapper">
-						<div class="shopping__image-slide">
-							<img src="img/tmp/shopslide_right_1.jpg" alt="@@">
-						</div>
-						<div class="shopping__image-slide">
-							<img src="img/tmp/shopslide_right_2.jpg" alt="@@">
-						</div>
-						<div class="shopping__image-slide">
+			<div class="shopping__imageblock-rightside">
+				<div class="shopping__slider shopping__slider_image">
+					<div class="shopping__wrapper shopping__wrapper_image">
+						<div class="shopping__slide shopping__slide_image">
 							<img src="img/tmp/shopslide_right_3.jpg" alt="@@">
 						</div>
+						<div class="shopping__slide shopping__slide_image">
+							<img src="img/tmp/shopslide_right_1.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_image">
+							<img src="img/tmp/shopslide_right_2.jpg" alt="@@">
+						</div>
 					</div>
 				</div>
-				<div class="shopping__smallimage-slider">
-					<div class="shopping__smallimage-wrapper">
-						<div class="shopping__smallimage-slide">
-							<img src="img/tmp/shopslide_small_1.jpg" alt="@@">
-						</div>
-						<div class="shopping__smallimage-slide">
-							<img src="img/tmp/shopslide_small_2.jpg" alt="@@">
-						</div>
-						<div class="shopping__smallimage-slide">
+				<div class="shopping__slider shopping__slider_smallimage">
+					<div class="shopping__wrapper shopping__wrapper_smallimage">
+						<div class="shopping__slide shopping__slide_smallimage">
 							<img src="img/tmp/shopslide_small_3.jpg" alt="@@">
 						</div>
+						<div class="shopping__slide shopping__slide_smallimage">
+							<img src="img/tmp/shopslide_small_1.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_smallimage">
+							<img src="img/tmp/shopslide_small_2.jpg" alt="@@">
+						</div>
 					</div>
 				</div>
-				<div class="shopping__brand-bigslider">
-					<div class="shopping__brand-bigwrapper">
-						<div class="shopping__brand-bigslide">
+				<div class="shopping__slider shopping__slider_bigbrand">
+					<div class="shopping__wrapper shopping__wrapper_bigbrand">
+						<div class="shopping__slide shopping__slide_bigbrand">
+							<img src="img/tmp/brand_12.jpg" alt="@@">
+						</div>
+						<div class="shopping__slide shopping__slide_bigbrand">
 							<img src="img/tmp/brand_4.jpg" alt="@@">
 						</div>
-						<div class="shopping__brand-bigslide">
+						<div class="shopping__slide shopping__slide_bigbrand">
 							<img src="img/tmp/brand_8.jpg" alt="@@">
-						</div>
-						<div class="shopping__brand-bigslide">
-							<img src="img/tmp/brand_12.jpg" alt="@@">
 						</div>
 					</div>
 				</div>
 				<div class="shopping__scheme">
-          <svg viewBox="0 0 23.86 23.73"><use xlink:href="img/svg.svg"></use></svg>
           <!-- stroke:#231f20; присваиваешь и меняешь -->
-					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.86 23.73" width="24" height="24"><defs><style>.cls-1{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.3px;}</style></defs><title>icon_scheme</title><polyline class="cls-1" points="21.24 16.2 23.21 16.57 23.21 1.65 17.19 0.65 11.38 3.3 6.48 1.07 0.65 3.26 0.65 18.18 6.48 15.98 11.16 18.07"/><line class="cls-1" x1="6.86" y1="3.93" x2="6.86" y2="13.4"/><line class="cls-1" x1="11.49" y1="5.77" x2="11.49" y2="9.38"/><line class="cls-1" x1="17.81" y1="3.26" x2="17.81" y2="8.05"/><path class="cls-1" d="M1084.62,1829.33c0,2.27-4.13,8.5-4.13,8.5s-4.13-6.24-4.13-8.5A4.13,4.13,0,0,1,1084.62,1829.33Z" transform="translate(-1064.67 -1814.75)"/><ellipse class="cls-1" cx="15.82" cy="14.27" rx="1.02" ry="1.02"/></svg>
+					<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.86 23.73" width="48" height="48"><defs><style>.cls-1{fill:none;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.3px;}</style></defs><title>icon_scheme</title><polyline class="cls-1" points="21.24 16.2 23.21 16.57 23.21 1.65 17.19 0.65 11.38 3.3 6.48 1.07 0.65 3.26 0.65 18.18 6.48 15.98 11.16 18.07"/><line class="cls-1" x1="6.86" y1="3.93" x2="6.86" y2="13.4"/><line class="cls-1" x1="11.49" y1="5.77" x2="11.49" y2="9.38"/><line class="cls-1" x1="17.81" y1="3.26" x2="17.81" y2="8.05"/><path class="cls-1" d="M1084.62,1829.33c0,2.27-4.13,8.5-4.13,8.5s-4.13-6.24-4.13-8.5A4.13,4.13,0,0,1,1084.62,1829.33Z" transform="translate(-1064.67 -1814.75)"/><ellipse class="cls-1" cx="15.82" cy="14.27" rx="1.02" ry="1.02"/></svg>
           <!-- <svg><use x="0" y="0" xlink:href="#some_svg_element_id" /></svg> -->
           <!-- вместо SVG :before, background-image -->
-					<p>Схема МЕГИ</p>
+					<p>Схема<br>МЕГИ</p>
 				</div>
 			</div>
 		</div>

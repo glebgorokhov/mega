@@ -130,11 +130,11 @@ hr {margin: 0;}
 
 /*############################*/
 
-.firstscreen {position: relative; min-height: 900px;
+.firstscreen {position: relative;
 	&__leftside {position: absolute; left: 0; top: 0; width: 64%;}
 	&__image-slider {overflow: hidden;}
 	&__image-slide {height: 900px;
-		img {height: 100%;}
+		img {min-height: 100%; min-width: 100%; object-fit: cover; width: 0;}
 	}
 	&__rotatedtext-slider {position: absolute; top: 0; right: 0; height: 100%;}
 	&__rotatedtext-slide {padding: 336px 0;}
@@ -167,7 +167,7 @@ hr {margin: 0;}
 
 /*############################*/
 
-.shopping {background-color: #eaeef1; margin-top: -148px; padding-top: 40px;
+.shopping {background-color: #eaeef1; padding-top: 40px;
 	&__cards {display: flex; justify-content: space-between;
 		li {width: 265px; background-color: #fff; margin-left: 20px; flex-shrink: 0; z-index: 1;
 			&:first-child {margin-left: 0;}
@@ -561,7 +561,18 @@ hr {margin: 0;}
 	.header__bottommenu {margin-top: 36px;}
 	.header__bottommenu li {margin-left: 20px;}
 	
-	.shopping {margin-top: -220px;}
+	.firstscreen__leftside {width: 69.5%;}
+	.firstscreen__image-slide {height: 768px;}
+	.firstscreen__rotatedtext-slide {padding: 306px 0;}
+	.firstscreen__slider-arrows {top: 329px;}
+	.firstscreen__textblock {width: 54.1%;}
+	.firstscreen .container {padding: 385px 0 70px;}
+	.firstscreen__text-slide {padding: 21px 0px 24px 35px;}
+	.firstscreen__slide-heading {letter-spacing: -0.01em;}
+	.firstscreen__smallimage-slider {bottom: 0;}
+	.firstscreen__slider-dots {bottom: 18px;}
+	
+	.shopping {padding-top: 50px;}
 	.shopping__imageblock {height: 550px;}
 	.shopping__slider_topbrand {width: 110px; height: 110px;}
 	.shopping__slider_bottombrand {width: 90px; height: 90px; left: 152px;}
@@ -629,7 +640,19 @@ hr {margin: 0;}
 	.header__topmenu li {margin-left: 53px;}
 	.header__topmenu {padding-left: 208px; position: relative; top: 6px;}
 	
-	.shopping {margin-top: -80px;}
+	.firstscreen__leftside {width: 88.7%;}
+	.firstscreen__image-slide {height: 900px;}
+	.firstscreen__rotatedtext-slide {padding: 340px 0;}
+	.firstscreen__slider-arrows {top: 194px; width: 120px;}
+	.firstscreen .container {padding: 575px 0 0;}
+	.firstscreen__textblock {width: 91%; padding-right: 191px;}
+	.firstscreen__text-slide {padding: 21px 0px 21px 35px;}
+	.firstscreen__smallimage-slider {left: 453px; bottom: 100%;}
+	.firstscreen__slider-dots li {display: block; margin-left: 0; margin-top: 11px;}
+	.firstscreen__slide-heading {white-space: nowrap;}
+	.firstscreen__slider-dots {bottom: 24px; right: -3px;}
+	
+	.shopping {margin-top: -7px; padding-top: 80px;}
 	.shopping__imageblock {height: 410px;}
 	.shopping__slider_topbrand {width: 85px; height: 85px;}
 	.shopping__slider_bottombrand {width: 68px; height: 68px; left: 117px;}
@@ -726,10 +749,28 @@ hr {margin: 0;}
 		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
 	}
 	.header__top {padding: 0;}
-	.header__logo {position: relative; top: 4px; left: 27px;}
+	.header__logo {position: relative; top: 4px; left: 20px;}
 	.header__logo img {width: 110px; height: 33px;}
 	
-	.shopping {margin-top: -378px;}
+	.firstscreen__leftside {width: 100%;}
+	.firstscreen__image-slide {height: 520px;}
+	.firstscreen__slider-arrows {display: none;}
+	.firstscreen__slide-rotatedtext {font-size: 24px;}
+	.firstscreen__rotatedtext-slider {right: 38px;}
+	.firstscreen__rotatedtext-slide {padding: 198px 0;}
+	.firstscreen .container {padding: 335px 20px 0;}
+	.firstscreen__slide-heading {font-size: 24px; white-space: normal; line-height: 1.25em;}
+	.firstscreen__slide-heading br {display: none;}
+	.firstscreen__textblock {width: 100%; padding-right: 0;}
+	.firstscreen__text-slide {padding: 21px 16px; min-height: 190px;}
+	.firstscreen__slide-text {margin-top: 19px; padding-left: 0px; padding-right: 10px;}
+	.firstscreen__slider-dots li {display: inline-block; margin-top: 0; margin-left: 7px;
+		&:first-child {margin-left: 0;}
+	}
+	.firstscreen__slider-dots {position: relative; top: 0; left: 0; right: 0; bottom: 0; text-align: center; padding-bottom: 18px; background-color: #fff;}
+	.firstscreen__smallimage-slider {display: none;}
+	
+	.shopping {margin-top: -48px; padding-top: 68px;}
 	.shopping__buttons {display: none;}
 	.shopping .container_imageblock {padding: 0; margin-top: 20px;}
 	.shopping__imageblock {position: relative;}

@@ -101,3 +101,10 @@ $('#loginform').submit(function(e){
 	$('.button_login').hide();
 	$('.logged').show();
 });
+
+// Слайд в блоке Megacard
+$(document).ready(function(){
+	var slidecontent = $('.megacard__about-right .megacard__topblock').html();
+	$('.megacard__mobileslide_green').html(slidecontent);
+	$('.megacard__about-right .megacard__text').clone().appendTo('.megacard__mobileslide_green');
+});

@@ -586,25 +586,49 @@ form {
     border: 0;
     border-radius: 0; }
 
-/* line 21, C:/wamp64/www/mega/www/src/style/style.scss */
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("../fonts/MyriadProRegular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("../fonts/MyriadProSemiBold.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Myriad Pro';
+  src: url("../fonts/MyriadProBold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Poiret One';
+  src: url("../fonts/PoiretOne-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal; }
+
+/* line 51, C:/wamp64/www/mega/www/src/style/style.scss */
 body {
   color: #000; }
 
-/* line 22, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 52, C:/wamp64/www/mega/www/src/style/style.scss */
 a {
   transition: all 0.25s ease-in-out;
   text-decoration: none; }
 
-/* line 23, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 53, C:/wamp64/www/mega/www/src/style/style.scss */
 ul {
   list-style: none; }
 
-/* line 24, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 54, C:/wamp64/www/mega/www/src/style/style.scss */
 button {
   cursor: pointer;
   border: 0; }
 
-/* line 25, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 55, C:/wamp64/www/mega/www/src/style/style.scss */
 input[type="radio"]:not(old) {
   width: 0;
   margin: 0;
@@ -618,11 +642,11 @@ input[type="radio"]:not(old) {
   left: 0;
   margin: auto; }
 
-/* line 26, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 56, C:/wamp64/www/mega/www/src/style/style.scss */
 hr {
   margin: 0; }
 
-/* line 28, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 58, C:/wamp64/www/mega/www/src/style/style.scss */
 .button,
 .popup-city__shop-hours,
 .popup-city__shop-name,
@@ -639,6 +663,7 @@ hr {
 .megacard__heading,
 .megacard__number,
 .megacard__slide-card-name,
+.megastyle__front-name,
 .footer__menu a,
 .footer__copyright,
 .footer__text,
@@ -655,12 +680,12 @@ hr {
 .popup-menu__logged a {
   font-family: 'DIN Pro', Arial, sans-serif; }
 
-/* line 59, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 90, C:/wamp64/www/mega/www/src/style/style.scss */
 .container {
   width: 1120px;
   margin: 0 auto; }
 
-/* line 60, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 91, C:/wamp64/www/mega/www/src/style/style.scss */
 .button {
   display: inline-block;
   line-height: 44px;
@@ -672,64 +697,64 @@ hr {
   padding: 0 10px;
   transition: all 0.25s ease-in-out;
   text-align: center; }
-  /* line 61, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 92, C:/wamp64/www/mega/www/src/style/style.scss */
   .button svg {
     vertical-align: middle;
     margin-right: 8px;
     margin-top: -5px; }
-    /* line 62, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 93, C:/wamp64/www/mega/www/src/style/style.scss */
     .button svg path {
       transition: all 0.25s ease-in-out; }
-  /* line 64, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 95, C:/wamp64/www/mega/www/src/style/style.scss */
   .button:hover {
     background-color: #d5a63a;
     color: #fff; }
-    /* line 65, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 96, C:/wamp64/www/mega/www/src/style/style.scss */
     .button:hover svg {
       stroke: #fff; }
-  /* line 67, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 98, C:/wamp64/www/mega/www/src/style/style.scss */
   .button_white {
     background-color: #fff;
     min-width: 138px; }
-    /* line 68, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 99, C:/wamp64/www/mega/www/src/style/style.scss */
     .button_white svg {
       margin-right: 10px; }
-    /* line 69, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 100, C:/wamp64/www/mega/www/src/style/style.scss */
     .button_white:hover {
       background-color: #5998c1; }
-      /* line 70, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 101, C:/wamp64/www/mega/www/src/style/style.scss */
       .button_white:hover svg {
         fill: #fff;
         stroke: transparent; }
-  /* line 73, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 104, C:/wamp64/www/mega/www/src/style/style.scss */
   .button_bordered {
     background-color: #fff;
     border: 2px solid #eaeef1;
     line-height: 40px;
     min-width: 168px; }
-  /* line 74, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 105, C:/wamp64/www/mega/www/src/style/style.scss */
   .button_white_bordered {
     background-color: transparent;
     border: 2px solid #fff;
     line-height: 40px; }
-    /* line 75, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 106, C:/wamp64/www/mega/www/src/style/style.scss */
     .button_white_bordered:hover {
       background-color: #fff;
       color: #000; }
-  /* line 77, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 108, C:/wamp64/www/mega/www/src/style/style.scss */
   .button_orange {
     background-color: #e8522f;
     color: #fff;
     font-size: 15px;
     font-weight: 500;
     padding: 0 48px; }
-    /* line 78, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 109, C:/wamp64/www/mega/www/src/style/style.scss */
     .button_orange:hover {
       opacity: 0.7;
       background-color: #e8522f;
       color: #fff; }
 
-/* line 81, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 112, C:/wamp64/www/mega/www/src/style/style.scss */
 .overlay {
   position: absolute;
   left: 0;
@@ -741,71 +766,70 @@ hr {
   transition: all 0.25s ease-in-out;
   background-color: #eaeef1;
   z-index: 101; }
-  /* line 82, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 113, C:/wamp64/www/mega/www/src/style/style.scss */
   .overlay.active {
     opacity: 0.9;
     pointer-events: all; }
-  /* line 83, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 114, C:/wamp64/www/mega/www/src/style/style.scss */
   .overlay.login {
     z-index: 104; }
 
 /*############################*/
-/* line 88, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 119, C:/wamp64/www/mega/www/src/style/style.scss */
 .header {
   text-align: center;
   position: absolute;
   left: 0;
   top: 0;
   z-index: 100;
-  width: 100%;
-  /*----Временно----*/ }
-  /* line 89, C:/wamp64/www/mega/www/src/style/style.scss */
+  width: 100%; }
+  /* line 120, C:/wamp64/www/mega/www/src/style/style.scss */
   .header .container {
     width: 1200px; }
-  /* line 91, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 122, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__top {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 22px 0; }
-  /* line 92, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 123, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu {
     padding-left: 170px; }
-    /* line 93, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 124, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__topmenu li {
       display: inline-block;
       vertical-align: middle;
       margin-left: 35px; }
-      /* line 94, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 125, C:/wamp64/www/mega/www/src/style/style.scss */
       .header__topmenu li:first-child {
         margin-left: 0; }
-    /* line 96, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 127, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__topmenu a {
       font-size: 14px;
       font-weight: 500;
       color: #000; }
-      /* line 97, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 128, C:/wamp64/www/mega/www/src/style/style.scss */
       .header__topmenu a:hover {
         color: #5998c1; }
-    /* line 99, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 130, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__topmenu svg, .header__topmenu img {
       vertical-align: middle;
       margin-right: 9px; }
-  /* line 101, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 132, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__phone a {
     font-size: 18px; }
-  /* line 102, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 133, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__bottommenu {
     margin-top: 44px; }
-    /* line 103, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 134, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__bottommenu li {
       display: inline-block;
       vertical-align: middle;
       margin-left: 43px; }
-      /* line 104, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 135, C:/wamp64/www/mega/www/src/style/style.scss */
       .header__bottommenu li:first-child {
         margin-left: 0; }
-    /* line 106, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 137, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__bottommenu a {
       font-size: 13px;
       text-transform: uppercase;
@@ -814,36 +838,36 @@ hr {
       letter-spacing: 0.01em;
       padding-bottom: 20px;
       border-bottom: 2px solid transparent; }
-      /* line 107, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 138, C:/wamp64/www/mega/www/src/style/style.scss */
       .header__bottommenu a:hover {
         color: #5998c1;
         border-color: #5998c1; }
-  /* line 110, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 141, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__logged {
     display: none;
     position: relative;
     padding: 10px 0; }
-    /* line 111, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 142, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__logged a {
       font-size: 15px;
       font-weight: 500;
       color: #000; }
-      /* line 112, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 143, C:/wamp64/www/mega/www/src/style/style.scss */
       .header__logged a:hover {
         color: #5998c1; }
-    /* line 115, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 146, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__logged:hover .header__user-actions {
       opacity: 1;
       pointer-events: all; }
-  /* line 118, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 149, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__user {
     font-weight: 600 !important; }
-  /* line 119, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 150, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__avatar {
     vertical-align: middle;
     display: inline-block;
     margin-right: 7px; }
-  /* line 120, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 151, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__user-actions {
     position: absolute;
     right: 0;
@@ -855,76 +879,76 @@ hr {
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease-in-out; }
-    /* line 121, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 152, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__user-actions li {
       margin-top: 18px; }
-      /* line 122, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 153, C:/wamp64/www/mega/www/src/style/style.scss */
       .header__user-actions li:first-child {
         margin-top: 0; }
-    /* line 124, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 155, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__user-actions .logout {
       color: #e95a39; }
-  /* line 128, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 157, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__burger {
     display: none; }
 
 /*############################*/
-/* line 133, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 162, C:/wamp64/www/mega/www/src/style/style.scss */
 .firstscreen {
   position: relative; }
-  /* line 134, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 163, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__leftside {
     position: absolute;
     left: 0;
     top: 0;
     width: 64%; }
-  /* line 135, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 164, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__image-slider {
     overflow: hidden; }
-  /* line 136, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 165, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__image-slide {
     height: 900px; }
-    /* line 137, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 166, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__image-slide img {
       min-height: 100%;
       min-width: 100%;
       object-fit: cover;
       width: 0; }
-  /* line 139, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 168, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__rotatedtext-slider {
     position: absolute;
     top: 0;
     right: 0;
     height: 100%; }
-  /* line 140, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 169, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__rotatedtext-slide {
     padding: 336px 0; }
-  /* line 141, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 170, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-rotatedtext {
     font-size: 36px;
     font-weight: 800;
     line-height: 0.8em;
     transform-origin: 100% 100%;
     transform: rotate(90deg); }
-  /* line 142, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 171, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen .container {
     padding: 411px 0 129px;
     position: relative; }
-  /* line 143, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 172, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__textblock {
     position: relative;
     z-index: 1;
     width: 53.5%;
     margin-left: auto;
     box-sizing: border-box; }
-  /* line 144, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 173, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__text-slider {
     background-color: #fff; }
-  /* line 145, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 174, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__text-slide {
     padding: 21px 35px;
     min-height: 212px; }
-  /* line 146, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 175, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__smallimage-slider {
     position: absolute;
     right: 100%;
@@ -932,46 +956,46 @@ hr {
     width: 100px;
     height: 100px;
     overflow: hidden; }
-  /* line 147, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 176, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-heading {
     font-size: 54px;
     font-weight: 500;
     line-height: 1em; }
-    /* line 148, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 177, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__slide-heading span {
       font-weight: 800; }
-  /* line 150, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 179, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-text {
     margin-top: 17px;
     padding-left: 4px; }
-  /* line 151, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 180, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-arrows {
     position: absolute;
     top: 354px;
     right: 0;
     width: 76px; }
-    /* line 152, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 181, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__slider-arrows svg {
       cursor: pointer;
       transition: all 0.25s ease-in-out; }
-      /* line 153, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 182, C:/wamp64/www/mega/www/src/style/style.scss */
       .firstscreen__slider-arrows svg:hover {
         stroke: #e8522f; }
-    /* line 155, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 184, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__slider-arrows .prev {
       position: absolute;
       left: 0;
       transform: rotate(180deg); }
-    /* line 156, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 185, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__slider-arrows .next {
       position: absolute;
       right: 0; }
-  /* line 158, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 187, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-dots {
     position: absolute;
     bottom: 38px;
     right: -5px; }
-    /* line 159, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 188, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__slider-dots li {
       display: inline-block;
       width: 19px;
@@ -982,7 +1006,7 @@ hr {
       margin-left: 7px;
       position: relative;
       transition: all 0.25s ease-in-out; }
-      /* line 160, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 189, C:/wamp64/www/mega/www/src/style/style.scss */
       .firstscreen__slider-dots li:after {
         content: "";
         width: 7px;
@@ -996,49 +1020,49 @@ hr {
         bottom: 0;
         margin: auto;
         transition: all 0.25s ease-in-out; }
-      /* line 161, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 190, C:/wamp64/www/mega/www/src/style/style.scss */
       .firstscreen__slider-dots li.active {
         background-color: #fff;
         border: 2px solid #ef9a84; }
-        /* line 162, C:/wamp64/www/mega/www/src/style/style.scss */
+        /* line 191, C:/wamp64/www/mega/www/src/style/style.scss */
         .firstscreen__slider-dots li.active:after {
           opacity: 0;
           pointer-events: none; }
 
 /*############################*/
-/* line 170, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 199, C:/wamp64/www/mega/www/src/style/style.scss */
 .shopping {
   background-color: #eaeef1;
   padding-top: 40px; }
-  /* line 171, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 200, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__cards {
     display: flex;
     justify-content: space-between; }
-    /* line 172, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 201, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__cards li {
       width: 265px;
       background-color: #fff;
       margin-left: 20px;
       flex-shrink: 0;
       z-index: 1; }
-      /* line 173, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 202, C:/wamp64/www/mega/www/src/style/style.scss */
       .shopping__cards li:first-child {
         margin-left: 0; }
-    /* line 175, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 204, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__cards a {
       display: inline-block;
       color: #000; }
-      /* line 176, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 205, C:/wamp64/www/mega/www/src/style/style.scss */
       .shopping__cards a:hover {
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15); }
-        /* line 177, C:/wamp64/www/mega/www/src/style/style.scss */
+        /* line 206, C:/wamp64/www/mega/www/src/style/style.scss */
         .shopping__cards a:hover .shopping__card-name {
           color: #5998c1; }
-  /* line 181, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 210, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__card-image {
     height: 157px;
     position: relative; }
-    /* line 182, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 211, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__card-image img {
       position: absolute;
       left: 0;
@@ -1050,7 +1074,7 @@ hr {
       min-height: 100%;
       width: 0;
       object-fit: cover; }
-  /* line 184, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 213, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__card-smallimage {
     position: absolute;
     left: 21px;
@@ -1058,23 +1082,23 @@ hr {
     width: 70px;
     height: 70px;
     border: 1px solid #eaeef1; }
-  /* line 185, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 214, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__card-textblock {
     padding: 25px 19px 59px;
     position: relative; }
-  /* line 186, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 215, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__card-name {
     font-size: 16px;
     font-weight: 600;
     transition: all 0.25s ease-in-out; }
-  /* line 187, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 216, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__card-text {
     font-size: 15px;
     position: relative;
     margin-top: 5px;
     line-height: 1.5em;
     max-height: 132px; }
-    /* line 188, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 217, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__card-text:after {
       content: "";
       display: inline-block;
@@ -1084,18 +1108,18 @@ hr {
       left: 0;
       bottom: 0;
       background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, white 100%); }
-  /* line 190, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 219, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__card-period {
     font-size: 12px;
     font-weight: 500;
     color: #8f9599;
     position: absolute;
     bottom: 17px; }
-    /* line 191, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 220, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__card-period_hot {
       color: #e8522f;
       padding-left: 30px; }
-      /* line 192, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 221, C:/wamp64/www/mega/www/src/style/style.scss */
       .shopping__card-period_hot:before {
         content: "";
         display: inline-block;
@@ -1110,83 +1134,83 @@ hr {
         top: 0;
         bottom: 0;
         margin: auto; }
-  /* line 195, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 224, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__buttons {
     margin-top: 29px;
     text-align: center; }
-    /* line 196, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 225, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__buttons .button {
       margin: 0 3px; }
-  /* line 198, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 227, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping .container_imageblock {
     margin-top: 30px; }
-  /* line 199, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 228, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock {
     height: 600px;
     overflow: hidden;
     display: flex;
     font-size: 0; }
-  /* line 200, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 229, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock-leftside {
     width: 50%;
     position: relative; }
-  /* line 201, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 230, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock-rightside {
     width: 50%;
     position: relative; }
-  /* line 202, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 231, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider {
     overflow: hidden; }
-    /* line 203, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 232, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slider_image {
       width: 100%;
       height: 100%; }
-    /* line 204, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 233, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slider_topbrand {
       width: 120px;
       height: 120px;
       position: absolute;
       left: 0;
       top: 0; }
-    /* line 205, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 234, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slider_midbrand {
       width: 100px;
       height: 100px;
       position: absolute;
       right: 0;
       bottom: 200px; }
-    /* line 206, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 235, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slider_bottombrand {
       width: 100px;
       height: 100px;
       position: absolute;
       left: 165px;
       bottom: 0; }
-    /* line 207, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 236, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slider_bigbrand {
       width: 140px;
       height: 140px;
       position: absolute;
       bottom: 50%;
       right: 50%; }
-    /* line 208, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 237, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slider_smallimage {
       width: 50%;
       height: 50%;
       left: 0;
       bottom: 0;
       position: absolute; }
-  /* line 210, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 239, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__wrapper {
     width: 300%;
     height: 100%; }
-  /* line 211, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 240, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slide {
     width: 33.33334%;
     height: 100%;
     display: inline-block;
     position: relative; }
-    /* line 212, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 241, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slide img {
       position: absolute;
       left: 0;
@@ -1198,7 +1222,7 @@ hr {
       min-height: 100%;
       width: 0;
       object-fit: cover; }
-  /* line 214, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 243, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slide-text {
     position: absolute;
     left: 165px;
@@ -1208,12 +1232,12 @@ hr {
     transform-origin: 0 100%;
     transform: rotate(-90deg) translate3d(0, 100%, 0);
     line-height: 1.25em; }
-    /* line 215, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 244, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__slide-text span {
       font-size: 45px;
       font-weight: 800;
       line-height: 0.6em; }
-  /* line 217, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 246, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__scheme {
     width: 100px;
     height: 100px;
@@ -1224,63 +1248,77 @@ hr {
     text-align: center;
     font-size: 14px;
     font-weight: 600; }
-    /* line 218, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 247, C:/wamp64/www/mega/www/src/style/style.scss */
     .shopping__scheme svg {
       margin-top: -14px; }
 
 /*############################*/
-/* line 224, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 253, C:/wamp64/www/mega/www/src/style/style.scss */
 .activities {
   margin-top: -158px;
   background-color: #fff;
   padding-top: 221px; }
-  /* line 225, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 254, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__largeheading {
     background-color: #ccc;
-    height: 217px; }
-  /* line 226, C:/wamp64/www/mega/www/src/style/style.scss */
+    height: 217px;
+    position: relative;
+    overflow: hidden;
+    width: 714px;
+    margin: auto; }
+    /* line 255, C:/wamp64/www/mega/www/src/style/style.scss */
+    .activities__largeheading:after {
+      content: url("../img/tmp/gifhead.svg");
+      display: block;
+      position: absolute;
+      left: -1px;
+      right: 0;
+      top: -1px;
+      bottom: 0;
+      margin: auto; }
+  /* line 257, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__list {
     display: flex;
     justify-content: space-between;
     margin-top: 40px; }
-  /* line 227, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 258, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card {
     width: 23%;
     text-align: center;
     padding: 0 25px; }
-    /* line 229, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 260, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_red .activities__card-time {
       color: #ef9a84; }
-    /* line 230, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 261, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_red .activities__button:hover {
       background-color: #ef9a84;
       border-color: #ef9a84; }
-    /* line 233, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 264, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_green .activities__card-time {
       color: #61b794; }
-    /* line 234, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 265, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_green .activities__button:hover {
       background-color: #61b794;
       border-color: #61b794; }
-    /* line 237, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 268, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_yellow .activities__card-time {
       color: #d5a63a; }
-    /* line 238, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 269, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_yellow .activities__button:hover {
       background-color: #d5a63a;
       border-color: #d5a63a; }
-    /* line 241, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 272, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_blue .activities__card-time {
       color: #a4c4d4; }
-    /* line 242, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 273, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card_blue .activities__button:hover {
       background-color: #a4c4d4;
       border-color: #a4c4d4; }
-  /* line 245, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 276, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card-image {
     height: 41px;
     position: relative; }
-    /* line 246, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 277, C:/wamp64/www/mega/www/src/style/style.scss */
     .activities__card-image img {
       position: absolute;
       left: 0;
@@ -1288,66 +1326,66 @@ hr {
       top: 0;
       bottom: 0;
       margin: auto; }
-  /* line 248, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 279, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card-name {
     font-size: 16px;
     font-weight: 600;
     margin-top: 24px; }
-  /* line 249, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 280, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card-text {
     font-size: 15px;
     margin-top: 16px; }
-  /* line 250, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 281, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card-time {
     line-height: 1em;
     min-height: 1em;
     font-size: 14px;
     font-weight: 500;
     margin-top: 11px; }
-  /* line 251, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 282, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__button {
     margin-top: 22px; }
 
 /*############################*/
-/* line 256, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 287, C:/wamp64/www/mega/www/src/style/style.scss */
 .megacard {
   padding-top: 40px; }
-  /* line 257, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 288, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about {
     display: flex;
     position: relative;
     overflow: hidden;
     height: 660px; }
-  /* line 258, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 289, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-left {
     background-color: #f8e7af;
     width: 50%;
     padding: 0 130px 0 59px; }
-  /* line 259, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 290, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-right {
     background-color: #acdac8;
     width: 50%;
     padding: 0 50px 0 183px; }
-  /* line 260, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 291, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__image {
     position: absolute;
     left: 8px;
     right: 0;
     bottom: -150px;
     margin: auto; }
-  /* line 261, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 292, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__heading {
     font-size: 30px;
     font-weight: 500;
     line-height: 1.2em; }
-  /* line 262, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 293, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__cardimage {
     display: none; }
-  /* line 263, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 294, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__text {
     font-size: 18px;
     max-width: 330px; }
-  /* line 264, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 295, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__number {
     font-size: 122px;
     font-weight: 800;
@@ -1355,7 +1393,7 @@ hr {
     margin-top: -4px;
     line-height: 0.9em;
     display: inline-block; }
-  /* line 265, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 296, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__rotatedtext {
     display: inline-block;
     font-size: 26px;
@@ -1364,40 +1402,40 @@ hr {
     transform: rotate(90deg);
     transform-origin: 150% -60%;
     width: 40px; }
-  /* line 266, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 297, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__topblock {
     margin-top: 95px;
     min-height: 204px;
     padding-bottom: 40px; }
-  /* line 267, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 298, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__toptext {
     font-size: 14px;
     font-weight: 500;
     display: inline-block;
     max-width: 100px; }
-  /* line 268, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 299, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__button {
     margin-top: 65px;
     min-width: 170px;
     font-size: 14px; }
-  /* line 269, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 300, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard .button_white:hover {
     background-color: #d5a63a; }
-  /* line 270, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 301, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard .button_white_bordered {
     margin-left: 14px;
     padding: 0 16px; }
-  /* line 271, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 302, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__course {
     margin-top: 42px;
     display: flex;
     align-items: center;
     margin-left: -5px; }
-    /* line 272, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 303, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__course > span {
       font-size: 22px;
       margin: 0 22px 0 5px; }
-    /* line 273, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 304, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__course p {
       display: inline-block;
       vertical-align: middle;
@@ -1408,41 +1446,41 @@ hr {
       border: 2px dashed transparent;
       padding-top: 11px;
       line-height: 1.1em; }
-      /* line 274, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 305, C:/wamp64/www/mega/www/src/style/style.scss */
       .megacard__course p span {
         font-weight: 600;
         font-size: 18px; }
-      /* line 275, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 306, C:/wamp64/www/mega/www/src/style/style.scss */
       .megacard__course p.megacard__course-bordered {
         border-color: #fff; }
-  /* line 278, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 309, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slider {
     position: relative;
     margin-top: -86px;
     padding: 0 105px; }
-  /* line 279, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 310, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slideoverflow {
     width: 100%;
     overflow: hidden; }
-  /* line 280, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 311, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__wrapper {
     display: flex;
     justify-content: space-between; }
-  /* line 281, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 312, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide {
     display: inline-block;
     width: 220px; }
-  /* line 282, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 313, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide-card {
     display: inline-block;
     width: 100%;
     height: 100%; }
-  /* line 283, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 314, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide-card-image {
     position: relative;
     height: 130px;
     overflow: hidden; }
-  /* line 284, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 315, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide-card-bg {
     position: absolute;
     left: 0;
@@ -1454,14 +1492,14 @@ hr {
     min-height: 100%;
     width: 0;
     object-fit: cover; }
-  /* line 285, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 316, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide-card-smallimage {
     position: absolute;
     left: 10px;
     bottom: 10px;
     width: 60px;
     height: 60px; }
-    /* line 286, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 317, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__slide-card-smallimage img {
       position: absolute;
       left: 0;
@@ -1473,13 +1511,13 @@ hr {
       min-height: 100%;
       width: 0;
       object-fit: cover; }
-  /* line 288, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 319, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide-card-name {
     font-size: 14px;
     font-weight: 500;
     padding: 16px 10px;
     color: #000; }
-  /* line 289, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 320, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slidearrows {
     position: absolute;
     left: 0;
@@ -1488,78 +1526,79 @@ hr {
     transform: translate3d(0, -100%, 0);
     height: 17px;
     pointer-events: none; }
-    /* line 290, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 321, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__slidearrows img {
       position: absolute;
       pointer-events: all;
       cursor: pointer; }
-      /* line 291, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 322, C:/wamp64/www/mega/www/src/style/style.scss */
       .megacard__slidearrows img.prev {
         left: 49px;
         transform: rotate(180deg); }
-      /* line 292, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 323, C:/wamp64/www/mega/www/src/style/style.scss */
       .megacard__slidearrows img.next {
         right: 43px; }
-  /* line 295, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 326, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobileslider {
     overflow: hidden;
     position: relative; }
-  /* line 296, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 327, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobilewrapper {
     width: 200%;
     display: flex; }
-  /* line 297, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 328, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobileslide {
     width: 50%;
     flex-shrink: 0; }
-    /* line 298, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 329, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__mobileslide_green {
       display: none; }
-  /* line 300, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 331, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobilearrows {
     display: none;
     position: absolute;
     width: 99%;
     top: 22.5%; }
-    /* line 301, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 332, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__mobilearrows .prev {
       position: absolute;
       left: 0;
       transform: rotate(180deg); }
-    /* line 302, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 333, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__mobilearrows .next {
       position: absolute;
       right: 0; }
-  /* line 304, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 335, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobileimage {
     display: none; }
 
 /*############################*/
-/* line 309, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 340, C:/wamp64/www/mega/www/src/style/style.scss */
 .megastyle {
   margin-top: 19px;
   min-height: 546px; }
-  /* line 310, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 341, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle .container {
     display: flex; }
-  /* line 311, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 342, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__leftside {
     width: 33.3333%; }
-  /* line 312, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 343, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__middle {
     width: 33.3333%; }
-  /* line 313, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 344, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__rightside {
     width: 33.3333%;
     position: relative;
     padding-top: 30px; }
-  /* line 314, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 345, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__name {
     font-size: 48px;
     line-height: 0.8em;
     padding: 38px 36px 28px;
-    min-height: 180px; }
-  /* line 315, C:/wamp64/www/mega/www/src/style/style.scss */
+    min-height: 180px;
+    font-family: 'Poiret One'; }
+  /* line 346, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front {
     position: relative;
     border: 3px solid #eaeef1;
@@ -1567,7 +1606,7 @@ hr {
     height: 360px;
     margin-left: -71px;
     background-color: #fff; }
-    /* line 316, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 347, C:/wamp64/www/mega/www/src/style/style.scss */
     .megastyle__front:after {
       content: "";
       display: inline-block;
@@ -1578,31 +1617,66 @@ hr {
       position: absolute;
       left: 17px;
       top: 17px; }
-    /* line 317, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 348, C:/wamp64/www/mega/www/src/style/style.scss */
     .megastyle__front .megastyle__imagetext {
       left: 98px;
       top: 167px;
       font-size: 24px; }
-  /* line 319, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 349, C:/wamp64/www/mega/www/src/style/style.scss */
+    .megastyle__front_other {
+      border: 0; }
+      /* line 350, C:/wamp64/www/mega/www/src/style/style.scss */
+      .megastyle__front_other:after {
+        display: none; }
+  /* line 353, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-textblock {
+    height: 50%;
+    padding: 50px 40px 30px; }
+  /* line 354, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-name {
+    font-size: 24px;
+    font-weight: 600; }
+  /* line 355, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-text {
+    font-size: 18px;
+    margin-top: 10px; }
+  /* line 356, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-image {
+    width: 100%;
+    height: 50%;
+    position: relative; }
+    /* line 357, C:/wamp64/www/mega/www/src/style/style.scss */
+    .megastyle__front-image img {
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      min-width: 100%;
+      min-height: 100%;
+      width: 0;
+      object-fit: cover; }
+  /* line 359, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__back {
-    position: absolute; }
-    /* line 320, C:/wamp64/www/mega/www/src/style/style.scss */
+    position: relative; }
+    /* line 360, C:/wamp64/www/mega/www/src/style/style.scss */
     .megastyle__back .megastyle__imagetext {
       left: 127px;
       top: 122px;
       font-size: 16px; }
-  /* line 322, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 362, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__imagetext {
     font-weight: 800;
     position: absolute;
     transform: rotate(-30deg); }
-  /* line 324, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 364, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__logo {
     position: absolute;
     left: 30px;
     top: 0;
     z-index: 1; }
-  /* line 325, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 365, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__text {
     font-size: 24px;
     font-family: 'PT Astra Serif', Georgia, serif;
@@ -1611,15 +1685,15 @@ hr {
     left: 29px;
     top: 99px;
     z-index: 1; }
-    /* line 326, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 366, C:/wamp64/www/mega/www/src/style/style.scss */
     .megastyle__text span {
       font-size: 18px; }
-  /* line 328, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 368, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__bg {
     position: relative;
     height: 100%;
     overflow: hidden; }
-    /* line 329, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 369, C:/wamp64/www/mega/www/src/style/style.scss */
     .megastyle__bg img {
       position: absolute;
       left: 0;
@@ -1633,133 +1707,133 @@ hr {
       object-fit: cover; }
 
 /*############################*/
-/* line 335, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 375, C:/wamp64/www/mega/www/src/style/style.scss */
 .footer {
   margin-top: 34px; }
-  /* line 336, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 376, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer .container {
     display: flex;
     flex-wrap: wrap;
     align-items: center; }
-  /* line 337, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 377, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__hr {
     width: 100%;
     border-color: #e8eaea; }
-  /* line 338, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 378, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__top {
     border-top: 1px solid #e8eaea;
     padding: 30px 0;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  /* line 339, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 379, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu {
     width: 50%; }
-    /* line 340, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 380, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__menu li {
       display: inline-block;
       margin-right: 30px; }
-      /* line 341, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 381, C:/wamp64/www/mega/www/src/style/style.scss */
       .footer__menu li:last-child {
         margin-right: 0; }
-    /* line 343, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 383, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__menu a {
       font-size: 14px;
       font-weight: 500;
       color: #000; }
-      /* line 344, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 384, C:/wamp64/www/mega/www/src/style/style.scss */
       .footer__menu a:hover {
         color: #5998c1; }
-  /* line 347, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 387, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__social {
     height: 29px;
     width: 50%;
     text-align: right;
     margin-top: 31px;
     margin-bottom: 31px; }
-    /* line 348, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 388, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social li {
       display: inline-block;
       margin-left: 16px; }
-      /* line 349, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 389, C:/wamp64/www/mega/www/src/style/style.scss */
       .footer__social li:first-child {
         margin-left: 0; }
-    /* line 351, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 391, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social a {
       display: inline-block; }
-    /* line 352, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 392, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social svg {
       transition: all 0.25s ease-in-out; }
-    /* line 353, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 393, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social .icon_fb:hover {
       fill: #3a5897; }
-    /* line 354, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 394, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social .icon_vk:hover {
       fill: #4e6e92; }
-    /* line 355, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 395, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social .icon_inst:hover {
       fill: #3e719b; }
-    /* line 356, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 396, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__social .icon_yt:hover {
       fill: #cc171e; }
-  /* line 358, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 398, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__bottom {
     border-top: 1px solid #e8eaea;
     padding: 36px 0;
     display: flex;
     justify-content: space-between;
     align-items: center; }
-  /* line 359, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 399, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__copyright {
     font-size: 14px;
     font-weight: 500;
     width: 50%; }
-  /* line 360, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 400, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__apps {
     margin-left: -34px;
     width: 25%;
     margin-right: 34px;
     margin-top: 34px;
     margin-bottom: 34px; }
-    /* line 361, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 401, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__apps div {
       display: inline-block;
       position: relative;
       padding-left: 30px;
       padding-top: 2px; }
-    /* line 362, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 402, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__apps img {
       position: absolute;
       left: 0;
       top: 0;
       bottom: 0;
       margin: auto; }
-  /* line 364, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 404, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__app_google {
     margin-right: 45px; }
-  /* line 365, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 405, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__apptext {
     font-size: 11px;
     font-weight: 500;
     font-family: 'Myriad Pro'; }
-  /* line 366, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 406, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__appstore {
     font-size: 17px;
     font-weight: 500;
     font-family: 'Myriad Pro';
     line-height: 1em; }
-  /* line 367, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 407, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__text {
     width: 25%;
     font-size: 14px;
     font-weight: 500;
     text-align: right; }
-    /* line 368, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 408, C:/wamp64/www/mega/www/src/style/style.scss */
     .footer__text a {
       color: #ec1d23; }
 
 /*############################*/
-/* line 374, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 414, C:/wamp64/www/mega/www/src/style/style.scss */
 .popup-login {
   position: absolute;
   right: 0;
@@ -1774,31 +1848,31 @@ hr {
   pointer-events: none;
   transition: all 0.25s ease-in-out;
   box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15); }
-  /* line 375, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 415, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login.active {
     opacity: 1;
     pointer-events: all; }
-  /* line 376, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 416, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login a:hover {
     opacity: 0.7; }
-  /* line 377, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 417, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login .container {
     width: 520px;
     margin-left: 40px;
     position: relative; }
-  /* line 378, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 418, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__closeicon {
     position: absolute;
     right: 0;
     top: -13px; }
-  /* line 379, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 419, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__heading {
     font-size: 24px;
     font-weight: 500; }
-  /* line 380, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 420, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__form {
     margin-top: 47px; }
-  /* line 382, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 422, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login input {
     font-size: 17px;
     line-height: 42px;
@@ -1809,20 +1883,20 @@ hr {
     border: 1px solid #d5d5d5;
     transition: all 0.25s ease-in-out;
     margin-top: 14px; }
-  /* line 383, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 423, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__field {
     position: relative; }
-    /* line 385, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 425, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login__field.error input {
       border-color: #e8522f; }
-    /* line 386, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 426, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login__field.error .popup-login__errortext {
       opacity: 1;
       pointer-events: all; }
-    /* line 388, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 428, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login__field + div {
       margin-top: 24px; }
-  /* line 390, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 430, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__errortext {
     opacity: 0;
     pointer-events: none;
@@ -1830,40 +1904,40 @@ hr {
     position: absolute;
     left: -2px;
     bottom: -25px; }
-  /* line 391, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 431, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__link {
     color: #5998c1; }
-    /* line 392, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 432, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login__link_forgotpw {
       position: absolute;
       left: 300px;
       top: 47px; }
-  /* line 394, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 434, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login .button {
     margin-top: 61px; }
-    /* line 395, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 435, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login .button + a {
       margin-left: 13px; }
-  /* line 397, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 437, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__text {
     margin-top: 55px; }
-  /* line 398, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 438, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__social {
     font-size: 0;
     margin-top: 24px; }
-    /* line 399, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 439, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login__social li {
       display: inline-block;
       margin-left: 31px; }
-      /* line 400, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 440, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-login__social li:first-child {
         margin-left: 0; }
-    /* line 402, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 442, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-login__social a {
       display: inline-block; }
 
 /*############################*/
-/* line 408, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 448, C:/wamp64/www/mega/www/src/style/style.scss */
 .popup-search {
   position: absolute;
   left: 0;
@@ -1875,26 +1949,26 @@ hr {
   opacity: 0;
   pointer-events: none;
   transition: all 0.25s ease-in-out; }
-  /* line 409, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 449, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-search.active {
     opacity: 1;
     pointer-events: all;
     box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15); }
-  /* line 410, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 450, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-search a:hover {
     opacity: 0.7; }
-  /* line 411, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 451, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-search__searchfield {
     display: flex;
     align-items: center; }
-  /* line 412, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 452, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-search__searchicon {
     margin-right: 56px; }
-  /* line 413, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 453, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-search__fieldname {
     font-size: 17px;
     color: #8f9599; }
-  /* line 414, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 454, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-search input {
     flex: 1;
     margin: 0 19px;
@@ -1902,7 +1976,7 @@ hr {
     border: 0; }
 
 /*############################*/
-/* line 419, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 459, C:/wamp64/www/mega/www/src/style/style.scss */
 .popup-city {
   position: absolute;
   left: 0;
@@ -1913,7 +1987,7 @@ hr {
   width: 100%;
   box-sizing: border-box;
   transition: all 1s ease-in-out; }
-  /* line 420, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 460, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city:after {
     content: "";
     box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15);
@@ -1925,18 +1999,18 @@ hr {
     width: 100%;
     height: 100%;
     transition: all 1s ease-in-out; }
-  /* line 421, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 461, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city.active {
     transform: translate3d(0, 0, 0); }
-    /* line 422, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 462, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city.active:after {
       opacity: 1; }
-  /* line 424, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 464, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city .container {
     position: relative;
     padding-top: 55px;
     padding-bottom: 100px; }
-  /* line 425, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 465, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__shop-selection {
     position: absolute;
     left: 145px;
@@ -1947,10 +2021,10 @@ hr {
     text-align: left;
     padding: 29px 10px 30px 18px;
     cursor: pointer; }
-    /* line 427, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 467, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__shop-selection:hover .popup-city__shop-name {
       color: #5998c1; }
-    /* line 429, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 469, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__shop-selection img {
       position: absolute;
       top: 0;
@@ -1958,10 +2032,10 @@ hr {
       right: 10px;
       margin: auto;
       transition: all 0.25s ease-in-out; }
-    /* line 430, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 470, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__shop-selection.active img {
       transform: rotate(180deg); }
-  /* line 432, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 472, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__shop-name {
     font-size: 14px;
     font-weight: 500;
@@ -1969,16 +2043,16 @@ hr {
     transition: all 0.25s ease-in-out;
     padding-right: 20px;
     position: relative; }
-  /* line 433, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 473, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__shop-hours {
     font-size: 12px;
     font-weight: 500;
     color: #8f9599;
     margin-top: 2px; }
-  /* line 434, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 474, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__head {
     position: relative; }
-  /* line 435, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 475, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__logo {
     position: absolute;
     left: 0;
@@ -1989,83 +2063,83 @@ hr {
     width: 104px;
     height: 31px;
     display: inline-block; }
-  /* line 436, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 476, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__closeicon {
     position: absolute;
     right: 0;
     top: 0; }
-  /* line 437, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 477, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__text {
     font-size: 14px;
     color: #8f9599;
     font-weight: 500; }
-  /* line 438, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 478, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__cities {
     display: flex;
     margin-top: 135px; }
-  /* line 439, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 479, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city {
     width: 33.3333%; }
-    /* line 441, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 481, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_moscow .popup-city__block {
       margin-top: 117px;
       margin-left: 57px;
       width: 197px;
       height: 257px; }
-    /* line 442, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 482, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_moscow .popup-city__radiodiv {
       position: absolute; }
-    /* line 443, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 483, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_moscow label:before {
       opacity: 1 !important;
       border-color: #e95a39 !important;
       pointer-events: all !important; }
-    /* line 446, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 486, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_spb .popup-city__block {
       margin-top: 128px;
       margin-left: 15px;
       width: 232px;
       height: 222px; }
-    /* line 447, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 487, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_spb .popup-city__radiodiv {
       position: absolute; }
-    /* line 448, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 488, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_spb label:before {
       opacity: 1 !important;
       border-color: #e95a39 !important;
       pointer-events: all !important; }
-    /* line 450, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 490, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__city_other {
       padding-left: 58px; }
-      /* line 451, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 491, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__city_other .popup-city__block {
         margin-top: 91px;
         height: 326px; }
-      /* line 452, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 492, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__city_other label {
         margin-left: -33px;
         padding-left: 33px; }
-  /* line 455, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 495, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__name {
     font-size: 16px;
     font-weight: 500; }
-    /* line 456, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 496, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__name_other {
       color: #8f9599; }
-  /* line 458, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 498, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__block {
     position: relative; }
-  /* line 459, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 499, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__radiodiv {
     position: relative; }
-    /* line 460, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 500, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv label {
       font-size: 14px;
       font-weight: 500;
       position: relative;
       cursor: pointer;
       transition: all 0.25s ease-in-out; }
-      /* line 461, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 501, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv label:before {
         content: "";
         display: inline-block;
@@ -2081,82 +2155,82 @@ hr {
         transition: all 0.25s ease-in-out;
         opacity: 0;
         pointer-events: none; }
-      /* line 462, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 502, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv label:hover {
         color: #e95a39; }
-        /* line 463, C:/wamp64/www/mega/www/src/style/style.scss */
+        /* line 503, C:/wamp64/www/mega/www/src/style/style.scss */
         .popup-city__radiodiv label:hover:before {
           opacity: 1;
           pointer-events: all; }
-    /* line 466, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 506, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv_khimki {
       left: -35px;
       top: 21px; }
-      /* line 467, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 507, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_khimki label:before {
         left: 57px;
         top: 5px; }
-      /* line 468, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 508, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_khimki .popup-city__check {
         right: auto;
         left: -30px; }
-    /* line 470, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 510, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv_tstan {
       left: -35px;
       top: 196px; }
-      /* line 471, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 511, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_tstan label:before {
         left: 71px;
         top: -45px; }
-      /* line 472, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 512, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_tstan .popup-city__check {
         right: auto;
         left: -30px; }
-    /* line 474, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 514, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv_bdacha {
       left: auto;
       top: 182px;
       right: -53px; }
-      /* line 475, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 515, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_bdacha label:before {
         left: -7px;
         top: -45px; }
-      /* line 476, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 516, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_bdacha .popup-city__check {
         right: -27px;
         top: 2px; }
-    /* line 478, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 518, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv_parnas {
       left: auto;
       top: 49px;
       right: -8px; }
-      /* line 479, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 519, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_parnas label:before {
         left: -28px;
         top: 3px; }
-      /* line 480, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 520, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_parnas .popup-city__check {
         right: -27px; }
-    /* line 482, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 522, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv_dybenko {
       left: auto;
       right: -74px;
       top: 171px; }
-      /* line 483, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 523, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_dybenko label:before {
         left: -27px;
         top: 7px; }
-      /* line 484, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 524, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_dybenko .popup-city__check {
         right: -27px; }
-    /* line 486, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 526, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-city__radiodiv_other {
       margin-top: -2px;
       width: 174px; }
-      /* line 487, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 527, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-city__radiodiv_other:first-child {
         margin-top: 0; }
-  /* line 490, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 530, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__check {
     opacity: 0;
     pointer-events: none;
@@ -2164,7 +2238,7 @@ hr {
     position: absolute;
     top: 5px;
     right: 0; }
-  /* line 491, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 531, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__currentshop {
     font-size: 12px;
     font-weight: 500;
@@ -2172,24 +2246,24 @@ hr {
     opacity: 0;
     pointer-events: none;
     transition: all 0.25s ease-in-out; }
-  /* line 493, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 533, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city input[type="radio"]:not(old):checked + label:before {
     background-color: #e95a39;
     border-color: #e95a39;
     opacity: 1;
     pointer-events: all; }
-  /* line 494, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 534, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city input[type="radio"]:not(old):checked ~ .popup-city__check {
     opacity: 1;
     pointer-events: all; }
-  /* line 495, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 535, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city input[type="radio"]:not(old):checked ~ .popup-city__currentshop {
     opacity: 1;
     pointer-events: all;
     margin-bottom: 18px; }
 
 /*############################*/
-/* line 501, C:/wamp64/www/mega/www/src/style/style.scss */
+/* line 541, C:/wamp64/www/mega/www/src/style/style.scss */
 .popup-menu {
   position: absolute;
   left: 0;
@@ -2202,164 +2276,174 @@ hr {
   opacity: 0;
   pointer-events: none;
   transition: all 0.25s ease-in-out; }
-  /* line 502, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 542, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu.active {
     opacity: 1;
     pointer-events: all;
     box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15); }
-  /* line 503, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 543, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu .container {
     position: relative;
     width: 964px;
     box-sizing: border-box;
     padding-left: 110px; }
-  /* line 504, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 544, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__closeicon {
     position: absolute;
     right: 0;
     top: 7px; }
-  /* line 505, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 545, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__shop-selection {
     position: relative;
-    display: inline-block; }
-    /* line 506, C:/wamp64/www/mega/www/src/style/style.scss */
+    display: inline-block;
+    min-width: 130px; }
+    /* line 546, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__shop-selection img {
       position: absolute;
       top: -17px;
       bottom: 0;
       right: -30px;
-      margin: auto; }
-  /* line 508, C:/wamp64/www/mega/www/src/style/style.scss */
+      margin: auto;
+      transition: all 0.25s ease-in-out; }
+      /* line 547, C:/wamp64/www/mega/www/src/style/style.scss */
+      .popup-menu__shop-selection img.active {
+        transform: rotate(180deg); }
+  /* line 550, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__shop-name {
     font-size: 16px;
-    font-weight: 500; }
-  /* line 509, C:/wamp64/www/mega/www/src/style/style.scss */
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.25s ease-in-out; }
+    /* line 551, C:/wamp64/www/mega/www/src/style/style.scss */
+    .popup-menu__shop-name:hover {
+      color: #5998c1; }
+  /* line 553, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__shop-hours {
     font-size: 12px;
     font-weight: 500;
     color: #8f9599;
     margin-top: 3px; }
-  /* line 510, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 554, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__topmenu {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     margin-top: 31px;
     padding-right: 122px; }
-    /* line 511, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 555, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__topmenu li {
       display: inline-block;
       vertical-align: middle;
       margin-left: 44px; }
-      /* line 512, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 556, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-menu__topmenu li:first-child {
         margin-left: 0; }
-    /* line 514, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 558, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__topmenu a {
       font-size: 14px;
       font-weight: 500;
       color: #000; }
-      /* line 515, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 559, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-menu__topmenu a:hover {
         color: #5998c1; }
-    /* line 517, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 561, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__topmenu svg, .popup-menu__topmenu img {
       vertical-align: middle;
       margin-right: 9px; }
-  /* line 519, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 563, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__phone {
     flex: 1;
     text-align: right; }
-    /* line 520, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 564, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__phone a {
       font-size: 22px; }
-  /* line 522, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 566, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__middle {
     border-top: 1px solid #e8eaea;
     margin-top: 43px; }
-  /* line 523, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 567, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu .midcontainer {
     display: flex;
     padding: 34px 0;
     padding-left: 110px; }
-  /* line 524, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 568, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__bottommenu {
     width: 50%; }
-    /* line 525, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 569, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__bottommenu li {
       margin-top: 18px; }
-      /* line 526, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 570, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-menu__bottommenu li:first-child {
         margin-top: 0; }
-    /* line 528, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 572, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__bottommenu a {
       font-size: 13px;
       text-transform: uppercase;
       font-weight: 600;
       color: #000;
       letter-spacing: 0.01em; }
-      /* line 529, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 573, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-menu__bottommenu a:hover {
         color: #5998c1; }
-  /* line 532, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 576, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__account {
     width: 50%;
     display: flex;
     align-items: center;
     padding-left: 92px; }
-  /* line 533, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 577, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__login {
     padding: 0 19px 0 11px; }
-    /* line 534, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 578, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__login svg {
       margin-right: 17px; }
-  /* line 536, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 580, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__logged {
     display: none;
     margin-top: -15px; }
-    /* line 537, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 581, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__logged a {
       font-size: 15px;
       font-weight: 500;
       color: #000; }
-  /* line 539, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 583, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__user {
     font-weight: 600 !important; }
-  /* line 540, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 584, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__avatar {
     vertical-align: middle;
     display: inline-block;
     margin-right: 21px; }
-  /* line 541, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 585, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__user-actions {
     padding-left: 44px;
     margin-top: 13px; }
-    /* line 542, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 586, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__user-actions li {
       margin-top: 18px; }
-      /* line 543, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 587, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-menu__user-actions li:first-child {
         margin-top: 0; }
-    /* line 545, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 589, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__user-actions .logout {
       color: #e95a39; }
-  /* line 547, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 591, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__bottom {
     border-top: 1px solid #e8eaea;
     padding-top: 34px; }
-    /* line 548, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 592, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__bottom a {
       font-size: 14px;
       font-weight: 500;
       color: #000; }
-      /* line 549, C:/wamp64/www/mega/www/src/style/style.scss */
+      /* line 593, C:/wamp64/www/mega/www/src/style/style.scss */
       .popup-menu__bottom a:hover {
         color: #5998c1; }
-    /* line 551, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 595, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__bottom svg {
       vertical-align: middle;
       margin-right: 9px; }
-    /* line 552, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 596, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__bottom input {
       font-size: 14px;
       line-height: 37px;
@@ -2368,12 +2452,12 @@ hr {
       box-sizing: border-box;
       padding: 0 10px;
       border: 1px solid #d5d5d5; }
-  /* line 554, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 598, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__search {
     position: relative;
     width: 280px;
     margin-top: 34px; }
-  /* line 555, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 599, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__searchicon {
     position: absolute;
     top: 0;
@@ -2383,374 +2467,403 @@ hr {
     display: inline-block;
     width: 18px;
     height: 18px; }
+  /* line 600, C:/wamp64/www/mega/www/src/style/style.scss */
+  .popup-menu__shop-select {
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
+    padding: 20px 10px;
+    box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.15);
+    z-index: 2;
+    min-width: 170px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.25s ease-in-out;
+    transform: translate3d(0, -10px, 0); }
+    /* line 601, C:/wamp64/www/mega/www/src/style/style.scss */
+    .popup-menu__shop-select.active {
+      opacity: 1;
+      pointer-events: all;
+      transform: translate3d(0, 0, 0); }
+    /* line 602, C:/wamp64/www/mega/www/src/style/style.scss */
+    .popup-menu__shop-select li {
+      margin-top: 15px; }
+      /* line 603, C:/wamp64/www/mega/www/src/style/style.scss */
+      .popup-menu__shop-select li:first-child {
+        margin-top: 0; }
 
 /*########## Адаптив ###########*/
 @media (max-width: 1280px) {
-  /* line 561, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 611, C:/wamp64/www/mega/www/src/style/style.scss */
   .container, .header .container, .popup-login .container {
     width: 964px; }
-  /* line 562, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 612, C:/wamp64/www/mega/www/src/style/style.scss */
   .container_imageblock, .megacard .container {
     width: 100%; }
-  /* line 563, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 613, C:/wamp64/www/mega/www/src/style/style.scss */
   .button {
     font-size: 14px;
     padding: 0 18px 0 12px; }
-    /* line 564, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 614, C:/wamp64/www/mega/www/src/style/style.scss */
     .button svg, .button img {
       margin-right: 17px; }
-  /* line 567, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 617, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__phone {
     display: none !important; }
-  /* line 568, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 618, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__action {
     display: none !important; }
-  /* line 569, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 619, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__burger {
     display: inline-block;
     margin-top: 10px; }
-  /* line 570, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 620, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu {
     padding-left: 204px;
     padding-right: 36px; }
-  /* line 571, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 621, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu svg, .header__topmenu img {
     margin-right: 20px; }
-  /* line 572, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 622, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu li {
     margin-left: 60px; }
-  /* line 573, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 623, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__bottommenu {
     margin-top: 36px; }
-  /* line 574, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 624, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__bottommenu li {
     margin-left: 20px; }
-  /* line 576, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 626, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__leftside {
     width: 69.5%; }
-  /* line 577, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 627, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__image-slide {
     height: 768px; }
-  /* line 578, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 628, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__rotatedtext-slide {
     padding: 306px 0; }
-  /* line 579, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 629, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-arrows {
     top: 329px; }
-  /* line 580, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 630, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__textblock {
     width: 54.1%; }
-  /* line 581, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 631, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen .container {
     padding: 385px 0 70px; }
-  /* line 582, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 632, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__text-slide {
     padding: 21px 0px 24px 35px; }
-  /* line 583, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 633, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-heading {
     letter-spacing: -0.01em; }
-  /* line 584, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 634, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__smallimage-slider {
     bottom: 0; }
-  /* line 585, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 635, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-dots {
     bottom: 18px; }
-  /* line 587, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 637, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping {
     padding-top: 50px; }
-  /* line 588, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 638, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock {
     height: 550px; }
-  /* line 589, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 639, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_topbrand {
     width: 110px;
     height: 110px; }
-  /* line 590, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 640, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_bottombrand {
     width: 90px;
     height: 90px;
     left: 152px; }
-  /* line 591, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 641, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_midbrand {
     width: 90px;
     height: 90px;
     bottom: 184px; }
-  /* line 592, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 642, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slide-text {
     line-height: 1em;
     left: 152px;
     bottom: 184px;
     letter-spacing: -0.08em; }
-  /* line 593, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 643, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_bigbrand {
     width: 128px;
     height: 128px; }
-  /* line 594, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 644, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__scheme {
     width: 90px;
     height: 90px;
     font-size: 13px; }
-  /* line 595, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 645, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__scheme svg {
     margin-top: -19px; }
-  /* line 597, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 647, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__list {
     margin-top: 37px; }
-  /* line 598, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 648, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card {
     padding: 0 5px; }
-  /* line 600, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 650, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard {
     padding-top: 50px; }
-  /* line 601, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 651, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-left {
     padding: 0 125px 0 28px; }
-  /* line 602, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 652, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-right {
     padding: 0 28px 0 183px; }
-  /* line 603, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 653, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__rotatedtext {
     width: 38px;
     transform-origin: 155% -60%; }
-  /* line 604, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 654, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__button {
     font-size: 15px;
     padding: 0 18px;
     min-width: 162px; }
-  /* line 605, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 655, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard .button_white_bordered {
     margin-left: 5px;
     padding: 0 14px; }
-  /* line 606, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 656, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__course {
     margin-top: 17px; }
-  /* line 607, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 657, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slider {
     padding: 0 58px; }
-  /* line 608, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 658, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slidearrows {
     transform: translate3d(0, -200%, 0); }
-  /* line 609, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 659, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slidearrows img.prev {
     left: 20px; }
-  /* line 610, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 660, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slidearrows img.next {
     right: 20px; }
-  /* line 612, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 662, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle .container {
     width: 100%; }
-  /* line 613, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 663, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__leftside {
     width: 36.4%; }
-  /* line 614, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 664, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__middle {
     width: 27.2%; }
-  /* line 615, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 665, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__rightside {
     width: 36.4%; }
-  /* line 616, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 666, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front {
     margin-left: -126px; }
-  /* line 618, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 668, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu {
     margin-left: -2px;
     width: 60%; }
-  /* line 619, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 669, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu li {
     margin-right: 29px; }
-  /* line 620, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 670, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__social {
     width: 40%; }
-  /* line 621, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 671, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__apps {
     width: 30%; }
-  /* line 622, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 672, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__app_google {
     margin-right: 46px; }
-  /* line 623, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 673, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__text {
     width: 20%; }
-  /* line 625, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 675, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__shop-selection {
     left: 185px; }
-  /* line 626, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 676, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city .container {
     padding-top: 76px; }
-  /* line 627, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 677, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__logo {
     top: -8px; }
-  /* line 628, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 678, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__closeicon {
     top: -35px; }
-  /* line 629, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 679, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__cities {
     margin-top: 114px; }
-  /* line 630, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 680, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city {
     width: 37.2%; }
-  /* line 631, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 681, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_other {
     width: 25.6%;
     padding-left: 73px; }
-  /* line 632, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 682, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login {
     width: 100%;
     height: auto;
     padding: 69px 0 100px; }
-  /* line 633, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 683, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login .container {
     margin-left: auto; }
-  /* line 634, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 684, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__heading {
     font-size: 20px;
     padding-left: 107px; }
-  /* line 635, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 685, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__closeicon {
     top: -28px; }
-  /* line 636, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 686, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__form {
     width: 280px;
     margin: 48px auto 0; }
-  /* line 637, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 687, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__link_forgotpw {
     left: auto;
     right: -118px; }
-  /* line 638, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 688, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login .button {
     padding: 0 49px; }
-  /* line 639, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 689, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__text, .popup-login__social {
-    margin-left: 341px; } }
+    margin-left: auto;
+    margin-right: auto;
+    width: 350px;
+    position: relative;
+    left: 40px; } }
 
 @media (max-width: 1020px) {
-  /* line 643, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 693, C:/wamp64/www/mega/www/src/style/style.scss */
   .container, .header .container, .popup-login .container, .popup-menu .container {
     width: 708px; }
-  /* line 644, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 694, C:/wamp64/www/mega/www/src/style/style.scss */
   .container_imageblock, .megacard .container {
     width: 100%; }
-  /* line 646, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 696, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__login {
     display: none; }
-  /* line 647, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 697, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__logged {
     display: none !important; }
-  /* line 648, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 698, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__bottommenu {
     display: none; }
-  /* line 650, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 700, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__shop-selection {
     left: 189px; }
-  /* line 651, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 701, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu svg, .header__topmenu img {
     display: block;
     margin: auto;
     margin-bottom: 6px; }
-  /* line 652, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 702, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu li {
     margin-left: 53px; }
-  /* line 653, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 703, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu {
     padding-left: 208px;
     position: relative;
     top: 6px; }
-  /* line 655, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 705, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__leftside {
     width: 88.7%; }
-  /* line 656, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 706, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__image-slide {
     height: 900px; }
-  /* line 657, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 707, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__rotatedtext-slide {
     padding: 340px 0; }
-  /* line 658, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 708, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-arrows {
     top: 194px;
     width: 120px; }
-  /* line 659, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 709, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen .container {
     padding: 575px 0 0; }
-  /* line 660, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 710, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__textblock {
     width: 91%;
     padding-right: 191px; }
-  /* line 661, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 711, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__text-slide {
     padding: 21px 0px 21px 35px; }
-  /* line 662, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 712, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__smallimage-slider {
     left: 453px;
     bottom: 100%; }
-  /* line 663, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 713, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-dots li {
     display: block;
     margin-left: 0;
     margin-top: 11px; }
-  /* line 664, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 714, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-heading {
     white-space: nowrap; }
-  /* line 665, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 715, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-dots {
     bottom: 24px;
     right: -3px; }
-  /* line 667, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 717, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping {
     margin-top: -7px;
     padding-top: 80px; }
-  /* line 668, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 718, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock {
     height: 410px; }
-  /* line 669, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 719, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_topbrand {
     width: 85px;
     height: 85px; }
-  /* line 670, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 720, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_bottombrand {
     width: 68px;
     height: 68px;
     left: 117px; }
-  /* line 671, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 721, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_midbrand {
     width: 65px;
     height: 65px;
     bottom: 140px; }
-  /* line 672, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 722, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slide-text span {
     font-size: 31px; }
-  /* line 673, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 723, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slide-text {
     font-size: 19px;
     left: 117px;
     bottom: 140px;
     letter-spacing: -0.05em; }
-  /* line 674, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 724, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_smallimage {
     display: none; }
-  /* line 675, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 725, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_bigbrand {
     width: 140px;
     height: 140px;
     left: 0;
     bottom: 0;
     right: auto; }
-  /* line 676, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 726, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__scheme {
     width: 98px;
     height: 98px; }
-  /* line 677, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 727, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__scheme svg {
     margin-top: -16px;
     margin-left: 2px;
     margin-bottom: 3px; }
-  /* line 679, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 729, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__list {
     flex-wrap: wrap;
     margin-top: 48px; }
-  /* line 680, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 730, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card {
     width: 50%;
     padding: 0 70px; }
-  /* line 681, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 731, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__button {
     margin-top: 17px;
     min-width: 180px;
@@ -2758,123 +2871,130 @@ hr {
     font-size: 15px;
     min-height: 44px;
     line-height: 36px; }
-  /* line 683, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 733, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard {
     padding-top: 4px; }
-  /* line 684, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 734, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__topblock {
     margin-top: 55px; }
-  /* line 685, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 735, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-right {
     padding: 0 39px 0 163px; }
-  /* line 686, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 736, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__number {
     margin-top: 33px; }
-  /* line 687, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 737, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__rotatedtext {
     transform-origin: 152% -67%; }
-  /* line 688, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 738, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__toptext {
     margin-top: 7px;
     padding-left: 5px;
     font-weight: 500;
     max-width: 140px; }
-  /* line 689, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 739, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__text {
     font-size: 16px;
     line-height: 1.5em;
     max-width: 192px; }
-  /* line 690, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 740, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__toptext br {
     display: none; }
-  /* line 691, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 741, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__topblock {
     padding-bottom: 30px; }
-  /* line 692, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 742, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-left .megacard__topblock {
     padding-bottom: 79px; }
-  /* line 693, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 743, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__button {
     margin-top: 40px;
     min-width: 190px; }
-    /* line 694, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 744, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__button:last-of-type {
       margin-top: 20px;
       margin-left: 0; }
-  /* line 696, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 746, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__course {
     margin-top: 37px;
     margin-left: -16px; }
-  /* line 697, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 747, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slider {
     padding-left: 28px;
     padding-right: auto; }
-  /* line 698, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 748, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slideoverflow {
     overflow: visible; }
-  /* line 699, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 749, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slidearrows {
     display: none; }
-  /* line 700, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 750, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slide {
     flex-shrink: 0;
     margin-left: 11px; }
-    /* line 701, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 751, C:/wamp64/www/mega/www/src/style/style.scss */
     .megacard__slide:first-child {
       margin-left: 0; }
-  /* line 703, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 753, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle .container {
     flex-direction: column;
     flex-wrap: wrap;
     height: 540px;
     align-content: space-between; }
-  /* line 704, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 754, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__leftside {
     width: 48.6%;
     height: 63.2%;
     overflow: hidden; }
-  /* line 705, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 755, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__back {
     position: relative; }
-  /* line 706, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 756, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__middle {
     width: 48.6%;
     height: 36.8%; }
-  /* line 707, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 757, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__name {
     font-size: 30px;
     padding: 30px 20px 30px 26px;
     min-height: auto; }
-  /* line 708, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 758, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__name br {
     display: none; }
-  /* line 709, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 759, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front {
     margin-left: 0;
     height: 115px; }
-  /* line 710, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 760, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front:after {
     height: 60px;
     left: 10px;
     top: 10px; }
-  /* line 711, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 761, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front .megastyle__imagetext {
     top: 30px;
     transform: rotate(0); }
-  /* line 712, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 762, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__rightside {
     width: 48.6%;
     height: 100%; }
-  /* line 714, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 763, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-image {
+    display: none; }
+  /* line 764, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-textblock {
+    height: 100%;
+    padding: 0 26px; }
+  /* line 766, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer {
     padding-bottom: 48px; }
-  /* line 715, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 767, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__hr {
     transform: scaleX(2); }
-  /* line 716, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 768, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__hr_top {
     order: 1; }
-  /* line 717, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 769, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu {
     order: 2;
     width: 100%;
@@ -2883,161 +3003,166 @@ hr {
     padding: 33px 0;
     display: flex;
     justify-content: space-between; }
-  /* line 718, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 770, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__hr_bottom {
     order: 3; }
-  /* line 719, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 771, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__apps {
     order: 4;
     width: 50%;
     margin: 0; }
-  /* line 720, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 772, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__social {
     order: 5;
     width: 50%; }
-  /* line 721, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 773, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__copyright {
     order: 6;
     width: 50%; }
-  /* line 722, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 774, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__text {
     order: 7;
     width: 50%; }
-  /* line 723, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 775, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu li {
     margin-right: 0; }
-  /* line 724, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 776, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__app {
     text-align: left; }
-  /* line 725, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 777, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__app_google {
     margin-right: 65px; }
-  /* line 727, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 779, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__map {
     display: none; }
-  /* line 728, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 780, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_moscow .popup-city__radiodiv, .popup-city__city_spb .popup-city__radiodiv {
     position: relative;
     left: auto;
     right: auto;
     top: auto;
     bottom: auto; }
-  /* line 729, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 781, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__logo {
     left: 50px; }
-  /* line 730, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 782, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city {
     width: 42.2%; }
-  /* line 731, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 783, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_spb {
     width: 41.8%; }
-  /* line 732, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 784, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_other {
     width: 16%;
     padding-left: 0; }
-  /* line 733, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 785, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_moscow .popup-city__block {
     margin-top: 50px;
     margin-left: 3px;
     width: auto;
     height: auto; }
-  /* line 734, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 786, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__currentshop {
     margin-bottom: 10px; }
-  /* line 735, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 787, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__radiodiv label:before {
     left: 0 !important;
     top: 0 !important;
     opacity: 0 !important;
     border-color: #d8d8d8 !important;
     pointer-events: none !important; }
-  /* line 736, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 788, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__radiodiv label:hover:before {
     opacity: 1 !important;
     pointer-events: all !important; }
-  /* line 737, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 789, C:/wamp64/www/mega/www/src/style/style.scss */
   input[type="radio"]:not(old):checked + label:before {
     background-color: #e95a39 !important;
     border-color: #e95a39 !important;
     opacity: 1 !important;
     pointer-events: all !important; }
-  /* line 738, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 790, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city label {
     margin-left: -25px;
     padding-left: 25px; }
-  /* line 739, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 791, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__radiodiv {
     min-width: 140px !important;
     width: auto !important;
     max-width: 174px; }
-  /* line 740, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 792, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__check {
     left: auto !important;
     bottom: auto !important;
     top: 5px !important;
     right: 0 !important; }
-  /* line 741, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 793, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_spb .popup-city__block {
     margin-top: 50px;
     margin-left: 3px; }
-  /* line 742, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 794, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__currentshop {
     margin-bottom: 12px; }
-  /* line 743, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 795, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__city_other .popup-city__block {
     margin-top: 50px;
     height: 430px; }
-  /* line 744, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 796, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login {
     padding: 65px 0 100px; }
-  /* line 745, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 797, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__closeicon {
     top: -24px;
     right: -4px; }
-  /* line 746, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 798, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__heading {
     font-size: 24px;
     padding-left: 0; }
-  /* line 747, C:/wamp64/www/mega/www/src/style/style.scss */
-  .popup-login__text, .popup-login__social {
-    margin-left: 218px; }
-  /* line 748, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 799, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu .container {
     padding-left: 63px; }
-  /* line 749, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 800, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__topmenu {
     padding-right: 60px; }
-  /* line 750, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 801, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__middle {
     margin-top: 53px; }
-  /* line 751, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 802, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu .midcontainer {
     padding: 44px 0;
     padding-left: 63px; } }
 
+@media (max-width: 800px) {
+  /* line 806, C:/wamp64/www/mega/www/src/style/style.scss */
+  .popup-city__city_moscow {
+    width: 41%; }
+  /* line 807, C:/wamp64/www/mega/www/src/style/style.scss */
+  .popup-city__city_spb {
+    width: 41%; } }
+
 @media (max-width: 760px) {
-  /* line 755, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 811, C:/wamp64/www/mega/www/src/style/style.scss */
   .container {
     width: 100% !important;
     padding: 0 20px;
     margin: 0; }
-  /* line 756, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 812, C:/wamp64/www/mega/www/src/style/style.scss */
   .header .container, .megacard .container {
     padding: 0; }
-  /* line 758, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 814, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-city__shop-selection {
     display: none; }
-  /* line 759, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 815, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__topmenu {
     display: none; }
-  /* line 760, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 816, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__burger {
     width: 64px;
     height: 60px;
     background-color: #fff;
     position: relative;
     margin: 0; }
-    /* line 761, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 817, C:/wamp64/www/mega/www/src/style/style.scss */
     .header__burger img {
       position: absolute;
       left: 0;
@@ -3045,69 +3170,69 @@ hr {
       top: 0;
       bottom: 0;
       margin: auto; }
-  /* line 763, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 819, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__top {
     padding: 0; }
-  /* line 764, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 820, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__logo {
     position: relative;
     top: 4px;
     left: 20px; }
-  /* line 765, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 821, C:/wamp64/www/mega/www/src/style/style.scss */
   .header__logo img {
     width: 110px;
     height: 33px; }
-  /* line 767, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 823, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__leftside {
     width: 100%; }
-  /* line 768, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 824, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__image-slide {
     height: 520px; }
-  /* line 769, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 825, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-arrows {
     display: none; }
-  /* line 770, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 826, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-rotatedtext {
     font-size: 24px; }
-  /* line 771, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 827, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__rotatedtext-slider {
     right: 38px; }
-  /* line 772, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 828, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__rotatedtext-slide {
     padding: 198px 0; }
-  /* line 773, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 829, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen .container {
     padding: 335px 20px 0; }
-  /* line 774, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 830, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-heading {
     font-size: 24px;
     white-space: normal;
     line-height: 1.25em; }
-  /* line 775, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 831, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-heading br {
     display: none; }
-  /* line 776, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 832, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__textblock {
     width: 100%;
     padding-right: 0; }
-  /* line 777, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 833, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__text-slide {
     padding: 21px 16px;
     min-height: 190px; }
-  /* line 778, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 834, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slide-text {
     margin-top: 19px;
     padding-left: 0px;
     padding-right: 10px; }
-  /* line 779, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 835, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-dots li {
     display: inline-block;
     margin-top: 0;
     margin-left: 7px; }
-    /* line 780, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 836, C:/wamp64/www/mega/www/src/style/style.scss */
     .firstscreen__slider-dots li:first-child {
       margin-left: 0; }
-  /* line 782, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 838, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__slider-dots {
     position: relative;
     top: 0;
@@ -3117,200 +3242,210 @@ hr {
     text-align: center;
     padding-bottom: 18px;
     background-color: #fff; }
-  /* line 783, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 839, C:/wamp64/www/mega/www/src/style/style.scss */
   .firstscreen__smallimage-slider {
     display: none; }
-  /* line 785, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 841, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping {
     margin-top: -48px;
     padding-top: 68px; }
-  /* line 786, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 842, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__buttons {
     display: none; }
-  /* line 787, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 843, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping .container_imageblock {
     padding: 0;
     margin-top: 20px; }
-  /* line 788, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 844, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock {
     position: relative; }
-  /* line 789, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 845, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock-leftside {
     width: 100%; }
-  /* line 790, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 846, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock-rightside {
     position: absolute;
     bottom: 0;
     right: 0;
     width: 100px;
     height: 60%; }
-  /* line 791, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 847, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_bigbrand {
     display: none; }
-  /* line 792, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 848, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_midbrand {
     display: none; }
-  /* line 793, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 849, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_topbrand {
     width: 82px;
     height: 82px; }
-  /* line 794, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 850, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__imageblock {
     height: 340px; }
-  /* line 795, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 851, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slider_bottombrand {
     left: 63px; }
-  /* line 796, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 852, C:/wamp64/www/mega/www/src/style/style.scss */
   .shopping__slide-text {
     left: 63px;
     bottom: 88px; }
-  /* line 798, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 854, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities {
     padding-top: 199px; }
-  /* line 799, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 855, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__largeheading {
-    height: 95px; }
-  /* line 800, C:/wamp64/www/mega/www/src/style/style.scss */
+    height: 95px;
+    width: 315px; }
+  /* line 856, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__list {
     margin-top: 25px; }
-  /* line 801, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 857, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card-name {
     margin-top: 14px; }
-  /* line 802, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 858, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card {
     width: 100%;
     padding: 0 39px; }
-  /* line 803, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 859, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__button {
     margin-bottom: 30px; }
-  /* line 804, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 860, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card_green .activities__button {
     margin-bottom: 20px; }
-  /* line 805, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 861, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card_yellow .activities__button {
     margin-bottom: 25px; }
-  /* line 806, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 862, C:/wamp64/www/mega/www/src/style/style.scss */
   .activities__card-time_empty {
     min-height: auto;
     margin-top: 0; }
-  /* line 808, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 864, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard {
     padding-top: 10px; }
-  /* line 809, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 865, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-left, .megacard__about-right {
     width: 100%;
     flex-shrink: 0; }
-  /* line 810, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 866, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__image {
     display: none; }
-  /* line 811, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 867, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobileslider {
     display: block;
     margin: auto;
     height: 300px;
     text-align: center; }
-  /* line 812, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 868, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobileslide_green {
     display: inline-block; }
-  /* line 813, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 869, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobilearrows {
     display: block; }
-  /* line 814, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 870, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__mobileimage {
     display: inline-block;
     margin-bottom: 4px; }
-  /* line 815, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 871, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__rotatedtext {
     transform: rotate(0);
     width: auto;
     display: block;
     margin-top: 1px;
     line-height: 1.2em; }
-  /* line 816, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 872, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__toptext {
     max-width: 100%;
     padding-left: 0;
     margin-top: 0; }
-  /* line 817, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 873, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__toptext br {
     display: none; }
-  /* line 818, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 874, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__heading {
     font-size: 24px; }
-  /* line 819, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 875, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__topblock {
     margin-top: 24px;
     min-height: auto; }
-  /* line 820, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 876, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-left {
     padding: 0 16px; }
-  /* line 821, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 877, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__heading br {
     display: none; }
-  /* line 822, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 878, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__about-left .megacard__topblock {
     padding-bottom: 30px; }
-  /* line 823, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 879, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__number {
     margin-top: 0; }
-  /* line 824, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 880, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__text {
     max-width: 100%;
     margin-top: 27px;
     line-height: 1.65em;
     text-align: left;
     padding-right: 10px; }
-  /* line 825, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 881, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__button {
     max-width: 190px;
     display: block;
     margin: 9px auto 0; }
-  /* line 826, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 882, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__button:last-of-type {
     margin: 10px auto 0; }
-  /* line 827, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 883, C:/wamp64/www/mega/www/src/style/style.scss */
   .megacard__slider {
     margin-top: -113px; }
-  /* line 829, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 885, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__leftside {
     width: 100%;
     height: 228px; }
-  /* line 830, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 886, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__middle {
     width: 100%; }
-  /* line 831, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 887, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__name {
     padding: 17px 0;
     line-height: 1em; }
-  /* line 832, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 888, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front {
     width: 100%;
     height: 95px; }
-  /* line 833, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 889, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__front .megastyle__imagetext {
     left: 58px; }
-  /* line 834, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 890, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__rightside {
     width: 100%;
     height: 397px;
     margin-top: 22px; }
-  /* line 835, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 891, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle .container {
     height: auto; }
-  /* line 836, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 892, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__logo {
     width: 180px;
     height: 39px;
     left: 18px; }
-  /* line 837, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 893, C:/wamp64/www/mega/www/src/style/style.scss */
   .megastyle__text {
     top: 67px;
     left: 19px; }
-  /* line 839, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 894, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-name {
+    font-size: 20px; }
+  /* line 895, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-text {
+    font-size: 18px; }
+  /* line 896, C:/wamp64/www/mega/www/src/style/style.scss */
+  .megastyle__front-textblock {
+    padding: 0; }
+  /* line 898, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer {
     margin-top: 29px;
     padding-bottom: 28px; }
-  /* line 840, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 899, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu {
     flex-wrap: wrap;
     text-align: left;
@@ -3318,18 +3453,18 @@ hr {
     flex-direction: column;
     height: 142px;
     justify-content: flex-start; }
-  /* line 841, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 900, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__menu li {
     width: 50%;
     margin-top: 13px; }
-  /* line 842, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 901, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__apps {
     width: 100%;
     display: flex;
     justify-content: space-between;
     padding: 14px 0 21px;
     padding-right: 13px; }
-  /* line 843, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 902, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__social {
     width: 100%;
     border-top: 1px solid #e8eaea;
@@ -3338,58 +3473,58 @@ hr {
     justify-content: space-between;
     margin: 0;
     padding: 20px 0 48px; }
-  /* line 844, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 903, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__app_google {
     margin: 0; }
-  /* line 845, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 904, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__copyright {
     width: 100%;
     margin-top: 26px;
     line-height: 1.6em; }
-  /* line 846, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 905, C:/wamp64/www/mega/www/src/style/style.scss */
   .footer__text {
     width: 100%;
     text-align: left;
     margin-top: 20px; }
-  /* line 848, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 907, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu {
     padding: 20px 0 100px; }
-  /* line 849, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 908, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__closeicon {
     top: 0;
     right: 20px; }
-  /* line 850, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 909, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu .container {
     padding-left: 25px; }
-  /* line 851, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 910, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__topmenu {
     flex-wrap: wrap;
     margin-top: 16px;
     padding-right: 0; }
-  /* line 852, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 911, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__topmenu li {
     margin: 0; }
-  /* line 853, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 912, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__phone {
     text-align: left;
     flex: 1 0 100%;
     margin-top: 13px !important;
     letter-spacing: -0.03em; }
-  /* line 854, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 913, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__middle {
     margin-top: 12px; }
-  /* line 855, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 914, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu .midcontainer {
     padding: 23px 0 0;
     flex-wrap: wrap; }
-  /* line 856, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 915, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__bottommenu {
     width: 100%;
     padding: 0 25px; }
-  /* line 857, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 916, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__bottommenu li {
     margin-top: 17px; }
-  /* line 858, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 917, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__account {
     width: 100%;
     padding-left: 0;
@@ -3397,59 +3532,63 @@ hr {
     padding: 20px 0;
     padding: 9px 25px;
     margin-top: 24px; }
-  /* line 859, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 918, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__bottom {
     padding-top: 23px; }
-  /* line 860, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 919, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__search {
     margin-top: 23px; }
-  /* line 861, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 920, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-menu__logged {
     margin-top: 10px;
     width: 100%;
     position: relative; }
-    /* line 862, C:/wamp64/www/mega/www/src/style/style.scss */
+    /* line 921, C:/wamp64/www/mega/www/src/style/style.scss */
     .popup-menu__logged li:last-child {
       position: absolute;
       right: 0;
       top: 0;
       margin-top: 2px; }
-  /* line 864, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 923, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login {
     padding: 40px 0 100px; }
-  /* line 865, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 924, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__closeicon {
     top: -20px;
     right: 20px; }
-  /* line 866, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 925, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__heading {
     font-size: 20px; }
-  /* line 867, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 926, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__form {
     margin-top: 27px; }
-  /* line 868, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 927, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__field + div {
     margin-top: 21px; }
-  /* line 869, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 928, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__link_forgotpw {
     position: static;
     display: inline-block;
     margin-top: 43px; }
-  /* line 870, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 929, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login .button {
     margin-top: 22px; }
-  /* line 871, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 930, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__text {
     line-height: 1.3em;
     margin-top: 23px; }
-  /* line 872, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 931, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__social {
     margin-top: 23px;
     display: flex;
     justify-content: space-between;
     padding: 0 30px; }
-  /* line 873, C:/wamp64/www/mega/www/src/style/style.scss */
+  /* line 932, C:/wamp64/www/mega/www/src/style/style.scss */
   .popup-login__social li {
-    margin: 0; } }
+    margin: 0; }
+  /* line 933, C:/wamp64/www/mega/www/src/style/style.scss */
+  .popup-login__text, .popup-login__social {
+    width: 280px;
+    left: 0; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -94,7 +94,7 @@ function checkinputs() {
 $("[data-required]").on("keyup change", function(){
    $(this).parent().removeClass("error");	$(this).parents('form').find('button').removeAttr("disabled");
 });
-
+// Отправка формы
 $('#loginform').submit(function(e){
 	e.preventDefault();
 	$(this)[0].reset();
@@ -102,9 +102,25 @@ $('#loginform').submit(function(e){
 	$('.logged').show();
 });
 
+
 // Слайд в блоке Megacard
 $(document).ready(function(){
 	var slidecontent = $('.megacard__about-right .megacard__topblock').html();
 	$('.megacard__mobileslide_green').html(slidecontent);
 	$('.megacard__about-right .megacard__text').clone().appendTo('.megacard__mobileslide_green');
+});
+
+// Меню выбора магазина в попап меню
+$('.shop-name_selected').click(function(){
+	$('.popup-menu__shop-select').toggleClass('active');
+	$('.popup-menu__shop-selection img').toggleClass('active');
+});
+
+$('.shop-select__option').click(function(){
+	var shop = $(this).text();
+	$('.shop-name').text(shop);
+	$('.popup-menu__shop-select').removeClass('active');
+	$('.popup-menu__shop-selection img').removeClass('active');
+	$('.popup-city__radiodiv input:not(old):checked').removeAttr('checked');
+	$('.popup-city__radiodiv input:not(old)[value="'+shop+'"]').attr('checked', 'checked');
 });

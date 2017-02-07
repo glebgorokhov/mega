@@ -18,6 +18,36 @@
 //--------------------------------------
 @import "global/rewrite";
 
+
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadProRegular.otf') format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadProSemiBold.otf') format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('../fonts/MyriadProBold.otf') format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Poiret One';
+	src: url('../fonts/PoiretOne-Regular.ttf') format('truetype');
+	font-weight: 400;
+	font-style: normal;
+}
+
 body {color: #000;}
 a {transition: all 0.25s ease-in-out; text-decoration: none;}
 ul {list-style: none;}
@@ -41,6 +71,7 @@ hr {margin: 0;}
 .megacard__heading,
 .megacard__number,
 .megacard__slide-card-name,
+.megastyle__front-name,
 .footer__menu a,
 .footer__copyright,
 .footer__text,
@@ -123,8 +154,6 @@ hr {margin: 0;}
 		}
 		.logout {color: #e95a39;}
 	}
-	
-	/*----Временно----*/
 	&__burger {display: none;}
 }
 
@@ -222,7 +251,9 @@ hr {margin: 0;}
 /*############################*/
 
 .activities {margin-top: -158px; background-color: #fff; padding-top: 221px;
-	&__largeheading {background-color: #ccc; height: 217px;}
+	&__largeheading {background-color: #ccc; height: 217px; position: relative; overflow: hidden; width: 714px; margin: auto;
+		&:after {content: url('../img/tmp/gifhead.svg'); display: block; position: absolute; left: -1px; right: 0; top: -1px; bottom: 0; margin: auto;}
+	}
 	&__list {display: flex; justify-content: space-between; margin-top: 40px;}
 	&__card {width: 23%; text-align: center; padding: 0 25px;
 		&_red {
@@ -311,12 +342,21 @@ hr {margin: 0;}
 	&__leftside {width: 33.3333%;}
 	&__middle {width: 33.3333%;}
 	&__rightside {width: 33.3333%; position: relative; padding-top: 30px;}
-	&__name {font-size: 48px; line-height: 0.8em; padding: 38px 36px 28px; min-height: 180px;}
+	&__name {font-size: 48px; line-height: 0.8em; padding: 38px 36px 28px; min-height: 180px; font-family: 'Poiret One';}
 	&__front {position: relative; border: 3px solid #eaeef1; width: 374px; height: 360px; margin-left: -71px; background-color: #fff;
 		&:after {content: ""; display: inline-block; width: 61px; height: 260px; border-top: 10px solid #ef9a84; border-left: 10px solid #ef9a84; position: absolute; left: 17px; top: 17px;}
 		.megastyle__imagetext {left: 98px; top: 167px; font-size: 24px;}
+		&_other {border: 0;
+			&:after {display: none;}
+		}
 	}
-	&__back {position: absolute;
+	&__front-textblock {height: 50%; padding: 50px 40px 30px;}
+	&__front-name {font-size: 24px; font-weight: 600;}
+	&__front-text {font-size: 18px; margin-top: 10px;}
+	&__front-image {width: 100%; height: 50%; position: relative;
+		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover;}
+	}
+	&__back {position: relative;
 		.megastyle__imagetext {left: 127px; top: 122px; font-size: 16px;}
 	}
 	&__imagetext {font-weight: 800; position: absolute;
@@ -502,10 +542,14 @@ hr {margin: 0;}
 	&.active {opacity: 1; pointer-events: all; box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15);}
 	.container {position: relative; width: 964px; box-sizing: border-box; padding-left: 110px;}
 	&__closeicon {position: absolute; right: 0; top: 7px;}
-	&__shop-selection {position: relative; display: inline-block;
-		img {position: absolute; top: -17px; bottom: 0; right: -30px; margin: auto;}
+	&__shop-selection {position: relative; display: inline-block; min-width: 130px;
+		img {position: absolute; top: -17px; bottom: 0; right: -30px; margin: auto; transition: all 0.25s ease-in-out;
+			&.active {transform: rotate(180deg);}
+		}
 	}
-	&__shop-name {font-size: 16px; font-weight: 500;}
+	&__shop-name {font-size: 16px; font-weight: 500; cursor: pointer; transition: all 0.25s ease-in-out;
+		&:hover {color: #5998c1;}
+	}
 	&__shop-hours {font-size: 12px; font-weight: 500; color: #8f9599; margin-top: 3px;}
 	&__topmenu {display: flex; justify-content: space-between; align-items: flex-end; margin-top: 31px; padding-right: 122px;
 		li {display: inline-block; vertical-align: middle; margin-left: 44px;
@@ -553,6 +597,12 @@ hr {margin: 0;}
 	}
 	&__search {position: relative; width: 280px; margin-top: 34px;}
 	&__searchicon {position: absolute; top: 0; bottom: 0; right: 8px; margin: auto; display: inline-block; width: 18px; height: 18px;}
+	&__shop-select {position: absolute; left: 0; top: 100%; background-color: #fff; padding: 20px 10px; box-shadow: 0 10px 10px 0 rgba(0,0,0,0.15); z-index: 2; min-width: 170px; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; transform: translate3d(0,-10px,0);
+		&.active {opacity: 1; pointer-events: all; transform: translate3d(0,0,0);}
+		li {margin-top: 15px;
+			&:first-child {margin-top: 0;}
+		}
+	}
 }
 
 /*########## Адаптив ###########*/
@@ -636,7 +686,7 @@ hr {margin: 0;}
 	.popup-login__form {width: 280px; margin: 48px auto 0;}
 	.popup-login__link_forgotpw {left: auto; right: -118px;}
 	.popup-login .button {padding: 0 49px;}
-	.popup-login__text, .popup-login__social {margin-left: 341px;}
+	.popup-login__text, .popup-login__social {margin-left: auto; margin-right: auto; width: 350px; position: relative; left: 40px;}
 }
 
 @media (max-width:1020px) {
@@ -710,6 +760,8 @@ hr {margin: 0;}
 	.megastyle__front:after {height: 60px; left: 10px; top: 10px;}
 	.megastyle__front .megastyle__imagetext {top: 30px; transform: rotate(0);}
 	.megastyle__rightside {width: 48.6%; height: 100%;}
+	.megastyle__front-image {display: none;}
+	.megastyle__front-textblock {height: 100%; padding: 0 26px;}
 	
 	.footer {padding-bottom: 48px;}
 	.footer__hr {transform: scaleX(2);}
@@ -744,11 +796,15 @@ hr {margin: 0;}
 	.popup-login {padding: 65px 0 100px;}
 	.popup-login__closeicon {top: -24px; right: -4px;}
 	.popup-login__heading {font-size: 24px; padding-left: 0;}
-	.popup-login__text, .popup-login__social {margin-left: 218px;}
 	.popup-menu .container {padding-left: 63px;}
 	.popup-menu__topmenu {padding-right: 60px;}
 	.popup-menu__middle {margin-top: 53px;}
 	.popup-menu .midcontainer {padding: 44px 0; padding-left: 63px;}
+}
+
+@media (max-width:800px) {
+	.popup-city__city_moscow {width: 41%;}
+	.popup-city__city_spb {width: 41%;}
 }
 
 @media (max-width:760px) {
@@ -796,7 +852,7 @@ hr {margin: 0;}
 	.shopping__slide-text {left: 63px; bottom: 88px;}
 	
 	.activities {padding-top: 199px;}
-	.activities__largeheading {height: 95px;}
+	.activities__largeheading {height: 95px; width: 315px;}
 	.activities__list {margin-top: 25px;}
 	.activities__card-name {margin-top: 14px;}
 	.activities__card {width: 100%; padding: 0 39px;}
@@ -835,6 +891,9 @@ hr {margin: 0;}
 	.megastyle .container {height: auto;}
 	.megastyle__logo {width: 180px; height: 39px; left: 18px;}
 	.megastyle__text {top: 67px; left: 19px;}
+	.megastyle__front-name {font-size: 20px;}
+	.megastyle__front-text {font-size: 18px;}
+	.megastyle__front-textblock {padding: 0;}
 	
 	.footer {margin-top: 29px; padding-bottom: 28px;}
 	.footer__menu {flex-wrap: wrap; text-align: left; padding: 12px 0 25px; flex-direction: column; height: 142px; justify-content: flex-start;}
@@ -871,4 +930,5 @@ hr {margin: 0;}
 	.popup-login__text {line-height: 1.3em; margin-top: 23px;}
 	.popup-login__social {margin-top: 23px; display: flex; justify-content: space-between; padding: 0 30px;}
 	.popup-login__social li {margin: 0;}
+	.popup-login__text, .popup-login__social {width: 280px; left: 0;}
 }

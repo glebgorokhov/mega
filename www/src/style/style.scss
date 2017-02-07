@@ -26,11 +26,13 @@ input[type="radio"]:not(old) {width: 0; margin: 0; padding: 0; opacity: 0; heigh
 hr {margin: 0;}
 
 .button,
-.header__shop-hours,
-.header__shop-name,
+.popup-city__shop-hours,
+.popup-city__shop-name,
 .header__topmenu a,
 .header__bottommenu a,
 .header__logged a,
+.firstscreen__rotatedtext-slider,
+.firstscreen__slide-heading,
 .shopping__card-name,
 .shopping__card-period,
 .shopping__slide-text,
@@ -47,7 +49,7 @@ hr {margin: 0;}
 .popup-city__name,
 .popup-city__radiodiv label,
 .popup-city__currentshop,
-.popup-menu__shop-select,
+.popup-menu__shop-name,
 .popup-menu__shop-hours,
 .popup-menu__topmenu a,
 .popup-menu__bottommenu a,
@@ -76,18 +78,18 @@ hr {margin: 0;}
 		&:hover {opacity: 0.7; background-color: #e8522f; color: #fff;}
 	}
 }
+.overlay {position: absolute; left: 0; top: 0; width: 100%; height: 100%; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; background-color: #eaeef1; z-index: 101;
+	&.active {opacity: 0.9; pointer-events: all;}
+	&.login {z-index: 104;}
+}
 
 /*############################*/
 
 .header {text-align: center; position: absolute; left: 0; top: 0; z-index: 100; width: 100%;
 	.container {width: 1200px;}
 	
-	&__top {display: flex; justify-content: space-between; align-items: center;}
-	
-	&__shop-selection {background-color: #fff; width: 132px; text-align: left; padding: 29px 10px 30px 18px; cursor: pointer;}
-	&__shop-name {font-size: 14px; font-weight: 500; width: 100%; background-image: url('../img/icons/icon_arrow_down.svg'); background-size: 13px 9px; background-repeat: no-repeat; background-position: top 50% right 0;}
-	&__shop-hours {font-size: 12px; font-weight: 500; color: #8f9599; margin-top: 2px;}
-	&__topmenu {
+	&__top {display: flex; justify-content: space-between; align-items: center; padding: 22px 0;}
+	&__topmenu {padding-left: 170px;
 		li {display: inline-block; vertical-align: middle; margin-left: 35px;
 			&:first-child {margin-left: 0;}
 		}
@@ -106,7 +108,9 @@ hr {margin: 0;}
 		}
 	}
 	&__logged {display: none; position: relative; padding: 10px 0;
-		a {font-size: 15px; font-weight: 500; color: #000;}
+		a {font-size: 15px; font-weight: 500; color: #000;
+			&:hover {color: #5998c1;}
+		}
 		&:hover {
 			.header__user-actions {opacity: 1; pointer-events: all;}
 		}
@@ -126,19 +130,48 @@ hr {margin: 0;}
 
 /*############################*/
 
-.firstscreen {position: relative; min-height: 900px; padding-left: 64%;
-	&__image-slider {position: absolute; left: 0; top: 0; width: 64%; overflow: hidden;}
+.firstscreen {position: relative; min-height: 900px;
+	&__leftside {position: absolute; left: 0; top: 0; width: 64%;}
+	&__image-slider {overflow: hidden;}
 	&__image-slide {height: 900px;
 		img {height: 100%;}
 	}
-	.container {width: 360px; margin-left: 0;}
+	&__rotatedtext-slider {position: absolute; top: 0; right: 0; height: 100%;}
+	&__rotatedtext-slide {padding: 336px 0;}
+	&__slide-rotatedtext {font-size: 36px; font-weight: 800; line-height: 0.8em; transform-origin: 100% 100%; transform: rotate(90deg);}
+	.container {padding: 411px 0 129px; position: relative;}
+	&__textblock {position: relative; z-index: 1; width: 53.5%; margin-left: auto; box-sizing: border-box;}
+	&__text-slider {background-color: #fff;}
+	&__text-slide {padding: 21px 35px; min-height: 212px;}
+	&__smallimage-slider {position: absolute; right: 100%; bottom: 100%; width: 100px; height: 100px; overflow: hidden;}
+	&__slide-heading {font-size: 54px; font-weight: 500; line-height: 1em;
+		span {font-weight: 800;}
+	}
+	&__slide-text {margin-top: 17px; padding-left: 4px;}
+	&__slider-arrows {position: absolute; top: 354px; right: 0; width: 76px;
+		svg {cursor: pointer; transition: all 0.25s ease-in-out;
+			&:hover {stroke: #e8522f;}
+		}
+		.prev {position: absolute; left: 0; transform: rotate(180deg);}
+		.next {position: absolute; right: 0;}
+	}
+	&__slider-dots {position: absolute; bottom: 38px; right: -5px;
+		li {display: inline-block; width: 19px; height: 19px; border-radius: 1000px; border: 2px solid transparent; cursor: pointer; margin-left: 7px; position: relative; transition: all 0.25s ease-in-out;
+			&:after {content: ""; width: 7px; height: 7px; border-radius: 1000px; background-color: #c6dae1; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; transition: all 0.25s ease-in-out;}
+			&.active {background-color: #fff; border: 2px solid #ef9a84;
+				&:after {opacity: 0; pointer-events: none;}
+			}
+		}
+	}
 }
 
 /*############################*/
 
 .shopping {background-color: #eaeef1; margin-top: -148px; padding-top: 40px;
 	&__cards {display: flex; justify-content: space-between;
-		li {width: 23.7%; background-color: #fff;}
+		li {width: 265px; background-color: #fff; margin-left: 20px; flex-shrink: 0; z-index: 1;
+			&:first-child {margin-left: 0;}
+		}
 		a {display: inline-block; color: #000;
 			&:hover {box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.15);
 				.shopping__card-name {color: #5998c1;}
@@ -162,7 +195,8 @@ hr {margin: 0;}
 	&__buttons {margin-top: 29px; text-align: center;
 		.button {margin: 0 3px;}
 	}
-	&__imageblock {margin-top: 30px; height: 600px; overflow: hidden; display: flex; font-size: 0;}
+	.container_imageblock {margin-top: 30px;}
+	&__imageblock {height: 600px; overflow: hidden; display: flex; font-size: 0;}
 	&__imageblock-leftside {width: 50%; position: relative;}
 	&__imageblock-rightside {width: 50%; position: relative;}
 	&__slider {overflow: hidden;
@@ -238,13 +272,13 @@ hr {margin: 0;}
 		>span {font-size: 22px; margin: 0 22px 0 5px;}
 		p {display: inline-block; vertical-align: middle; text-align: center; width: 62px; height: 62px; border-radius: 1000px; border: 2px dashed transparent; padding-top: 11px; line-height: 1.1em;
 			span {font-weight: 600; font-size: 18px;}
-			&.bordered {border-color: #fff;}
+			&.megacard__course-bordered {border-color: #fff;}
 		}
 	}
 	&__slider {position: relative; margin-top: -86px; padding: 0 105px;}
 	&__slideoverflow {width: 100%; overflow: hidden;}
 	&__wrapper {display: flex; justify-content: space-between;}
-	&__slide {display: inline-block; width: 24%;}
+	&__slide {display: inline-block; width: 220px;}
 	&__slide-card {display: inline-block; width: 100%; height: 100%;}
 	&__slide-card-image {position: relative; height: 130px; overflow: hidden;}
 	&__slide-card-bg {position: absolute; left: 0; top: 0; bottom: 0; right: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover;}
@@ -258,6 +292,7 @@ hr {margin: 0;}
 			&.next {right: 43px;}
 		}
 	}
+	&__mobileimage {display: none;}
 }
 
 /*############################*/
@@ -268,7 +303,7 @@ hr {margin: 0;}
 	&__middle {width: 33.3333%;}
 	&__rightside {width: 33.3333%; position: relative; padding-top: 30px;}
 	&__name {font-size: 48px; line-height: 0.8em; padding: 38px 36px 28px; min-height: 180px;}
-	&__front {position: relative; border: 3px solid #eaeef1; width: 374px; height: 360px; margin-left: -71px;
+	&__front {position: relative; border: 3px solid #eaeef1; width: 374px; height: 360px; margin-left: -71px; background-color: #fff;
 		&:after {content: ""; display: inline-block; width: 61px; height: 260px; border-top: 10px solid #ef9a84; border-left: 10px solid #ef9a84; position: absolute; left: 17px; top: 17px;}
 		.megastyle__imagetext {left: 98px; top: 167px; font-size: 24px;}
 	}
@@ -281,7 +316,7 @@ hr {margin: 0;}
 	&__text {font-size: 24px; font-family: 'PT Astra Serif', Georgia, serif; text-transform: uppercase; position: absolute; left: 29px; top: 99px; z-index: 1;
 		span {font-size: 18px;}
 	}
-	&__bg {position: relative; height: 100%;
+	&__bg {position: relative; height: 100%; overflow: hidden;
 		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; min-width: 100%; min-height: 100%; width: 0; object-fit: cover;}
 	}
 }
@@ -290,7 +325,7 @@ hr {margin: 0;}
 
 .footer {margin-top: 34px;
 	.container {display: flex; flex-wrap: wrap; align-items: center;}
-	&__hr {width: 100%;}
+	&__hr {width: 100%; border-color: #e8eaea;}
 	&__top {border-top: 1px solid #e8eaea; padding: 30px 0; display: flex; justify-content: space-between; align-items: center;}
 	&__menu {width: 50%;
 		li {display: inline-block; margin-right: 30px;
@@ -327,7 +362,8 @@ hr {margin: 0;}
 
 /*############################*/
 
-.popup-login {display: none; position: absolute; right: 0; top: 0; background-color: #fff; z-index: 101; width: 50%; min-height: 100vh; font-size: 17px; padding: 51px 0 100px;
+.popup-login {position: absolute; right: 0; top: 0; background-color: #fff; z-index: 105; width: 50%; height: 100%; font-size: 17px; padding: 51px 0 100px; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15);
+	&.active {opacity: 1; pointer-events: all;}
 	a:hover {opacity: 0.7;}
 	.container {width: 520px; margin-left: 40px; position: relative;}
 	&__closeicon {position: absolute; right: 0; top: -13px;}
@@ -342,7 +378,7 @@ hr {margin: 0;}
 		}
 		& + div {margin-top: 24px;}
 	}
-	&__errortext {opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; position: absolute; left: -2px; bottom: -37px;}
+	&__errortext {opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; position: absolute; left: -2px; bottom: -25px;}
 	&__link {color: #5998c1;
 		&_forgotpw {position: absolute; left: 300px; top: 47px;}
 	}
@@ -360,7 +396,8 @@ hr {margin: 0;}
 
 /*############################*/
 
-.popup-search {display: none; position: absolute; left: 0; top: 0; background-color: #fff; z-index: 101; width: 100%; padding: 35px 0;
+.popup-search {position: absolute; left: 0; top: 0; background-color: #fff; z-index: 102; width: 100%; padding: 35px 0; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;
+	&.active {opacity: 1; pointer-events: all; box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15);}
 	a:hover {opacity: 0.7;}
 	&__searchfield {display: flex; align-items: center;}
 	&__searchicon {margin-right: 56px;}
@@ -370,9 +407,20 @@ hr {margin: 0;}
 
 /*############################*/
 
-.popup-city {display: none; position: absolute; left: 0; top: 0; background-color: #fff; z-index: 101; width: 100%; padding-top: 55px; min-height: 100vh; padding-bottom: 100px; box-sizing: border-box;
+.popup-city {position: absolute; left: 0; top: 0; transform: translateY(-100%); background-color: #fff; z-index: 101; width: 100%; min-height: 100vh; box-sizing: border-box; transition: all 1s ease-in-out;
+	&.active {transform: translateY(0); box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15);}
+	.container {position: relative; padding-top: 55px; padding-bottom: 100px;}
+	&__shop-selection {position: absolute; left: 145px; top: 100%; background-color: #fff; min-width: 132px; max-width: 145px; text-align: left; padding: 29px 10px 30px 18px; cursor: pointer;
+		&:hover {
+			.popup-city__shop-name {color: #5998c1;}
+		}
+		img {position: absolute; top: 0; bottom: 20px; right: 10px; margin: auto; transition: all 0.25s ease-in-out;}
+		&.active img {transform: rotate(180deg);}
+	}
+	&__shop-name {font-size: 14px; font-weight: 500; width: 100%; transition: all 0.25s ease-in-out; padding-right: 20px; position: relative;}
+	&__shop-hours {font-size: 12px; font-weight: 500; color: #8f9599; margin-top: 2px;}
 	&__head {position: relative;}
-	&__logo {position: absolute; left: 0; right: 0; top: -15px; bottom: 0; margin: auto;}
+	&__logo {position: absolute; left: 0; right: 0; top: -15px; bottom: 0; margin: auto; width: 104px; height: 31px; display: inline-block;}
 	&__closeicon {position: absolute; right: 0; top: 0;}
 	&__text {font-size: 14px; color: #8f9599; font-weight: 500;}
 	&__cities {display: flex; margin-top: 135px;}
@@ -438,12 +486,16 @@ hr {margin: 0;}
 
 /*############################*/
 
-.popup-menu {display: none; position: absolute; left: 0; top: 0; background-color: #fff; z-index: 101; width: 100%; padding: 41px 0 100px; min-height: 100vh; box-sizing: border-box;
+.popup-menu {position: absolute; left: 0; top: 0; background-color: #fff; z-index: 101; width: 100%; padding: 34px 0 100px; min-height: 100vh; box-sizing: border-box; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;
+	&.active {opacity: 1; pointer-events: all; box-shadow: 0px 15px 38px 0px rgba(0, 0, 0, 0.15);}
 	.container {position: relative; width: 964px; box-sizing: border-box; padding-left: 110px;}
-	&__closeicon {position: absolute; right: 0; top: 0;}
-	&__shop-select {font-size: 16px; font-weight: 500;}
-	&__shop-hours {font-size: 12px; font-weight: 500; color: #8f9599;}
-	&__topmenu {display: flex; justify-content: space-between; align-items: flex-end; margin-top: 27px; padding-right: 122px;
+	&__closeicon {position: absolute; right: 0; top: 7px;}
+	&__shop-selection {position: relative; display: inline-block;
+		img {position: absolute; top: -17px; bottom: 0; right: -30px; margin: auto;}
+	}
+	&__shop-name {font-size: 16px; font-weight: 500;}
+	&__shop-hours {font-size: 12px; font-weight: 500; color: #8f9599; margin-top: 3px;}
+	&__topmenu {display: flex; justify-content: space-between; align-items: flex-end; margin-top: 31px; padding-right: 122px;
 		li {display: inline-block; vertical-align: middle; margin-left: 44px;
 			&:first-child {margin-left: 0;}
 		}
@@ -489,4 +541,274 @@ hr {margin: 0;}
 	}
 	&__search {position: relative; width: 280px; margin-top: 34px;}
 	&__searchicon {position: absolute; top: 0; bottom: 0; right: 8px; margin: auto; display: inline-block; width: 18px; height: 18px;}
+}
+
+/*########## Адаптив ###########*/
+
+@media (max-width:1280px) {
+	.container, .header .container, .popup-login .container {width: 964px;}
+	.container_imageblock, .megacard .container {width: 100%;}
+	.button {font-size: 14px; padding: 0 18px 0 12px;
+		svg, img {margin-right: 17px;}
+	}
+	
+	.header__phone {display: none !important;}
+	.header__action {display: none !important;}
+	.header__burger {display: inline-block; margin-top: 10px;}
+	.header__topmenu {padding-left: 204px; padding-right: 36px;}
+	.header__topmenu svg, .header__topmenu img {margin-right: 20px;}
+	.header__topmenu li {margin-left: 60px;}
+	.header__bottommenu {margin-top: 36px;}
+	.header__bottommenu li {margin-left: 20px;}
+	
+	.shopping {margin-top: -220px;}
+	.shopping__imageblock {height: 550px;}
+	.shopping__slider_topbrand {width: 110px; height: 110px;}
+	.shopping__slider_bottombrand {width: 90px; height: 90px; left: 152px;}
+	.shopping__slider_midbrand {width: 90px; height: 90px; bottom: 184px;}
+	.shopping__slide-text {line-height: 1em; left: 152px; bottom: 184px; letter-spacing: -0.08em;}
+	.shopping__slider_bigbrand {width: 128px; height: 128px;}
+	.shopping__scheme {width: 90px; height: 90px; font-size: 13px;}
+	.shopping__scheme svg {margin-top: -19px;}
+	
+	.activities__list {margin-top: 37px;}
+	.activities__card {padding: 0 5px;}
+	
+	.megacard {padding-top: 50px;}
+	.megacard__about-left {padding: 0 125px 0 28px;}
+	.megacard__about-right {padding: 0 28px 0 183px;}
+	.megacard__rotatedtext {width: 38px; transform-origin: 155% -60%;}
+	.megacard__button {font-size: 15px; padding: 0 18px; min-width: 162px;}
+	.megacard .button_white_bordered {margin-left: 5px; padding: 0 14px;}
+	.megacard__course {margin-top: 17px;}
+	.megacard__slider {padding: 0 58px;}
+	.megacard__slidearrows {transform: translateY(-200%);}
+	.megacard__slidearrows img.prev {left: 20px;}
+	.megacard__slidearrows img.next {right: 20px;}
+	
+	.megastyle .container {width: 100%;}
+	.megastyle__leftside {width: 36.4%;}
+	.megastyle__middle {width: 27.2%;}
+	.megastyle__rightside {width: 36.4%;}
+	.megastyle__front {margin-left: -126px;}
+	
+	.footer__menu {margin-left: -2px; width: 60%;}
+	.footer__menu li {margin-right: 29px;}
+	.footer__social {width: 40%;}
+	.footer__apps {width: 30%;}
+	.footer__app_google {margin-right: 46px;}
+	.footer__text {width: 20%;}
+	
+	.popup-city__shop-selection {left: 185px;}
+	.popup-city .container {padding-top: 76px;}
+	.popup-city__logo {top: -8px;}
+	.popup-city__closeicon {top: -35px;}
+	.popup-city__cities {margin-top: 114px;}
+	.popup-city__city {width: 37.2%;}
+	.popup-city__city_other {width: 25.6%; padding-left: 73px;}
+	.popup-login {width: 100%; height: auto; padding: 69px 0 100px;}
+	.popup-login .container {margin-left: auto;}
+	.popup-login__heading {font-size: 20px; padding-left: 107px;}
+	.popup-login__closeicon {top: -28px;}
+	.popup-login__form {width: 280px; margin: 48px auto 0;}
+	.popup-login__link_forgotpw {left: auto; right: -118px;}
+	.popup-login .button {padding: 0 49px;}
+	.popup-login__text, .popup-login__social {margin-left: 341px;}
+}
+
+@media (max-width:1020px) {
+	.container, .header .container, .popup-login .container, .popup-menu .container {width: 708px;}
+	.container_imageblock, .megacard .container, {width: 100%;}
+	
+	.header__login {display: none;}
+	.header__logged {display: none !important;}
+	.header__bottommenu {display: none;}
+	
+	.popup-city__shop-selection {left: 189px;}
+	.header__topmenu svg, .header__topmenu img {display: block; margin: auto; margin-bottom: 6px;}
+	.header__topmenu li {margin-left: 53px;}
+	.header__topmenu {padding-left: 208px; position: relative; top: 6px;}
+	
+	.shopping {margin-top: -80px;}
+	.shopping__imageblock {height: 410px;}
+	.shopping__slider_topbrand {width: 85px; height: 85px;}
+	.shopping__slider_bottombrand {width: 68px; height: 68px; left: 117px;}
+	.shopping__slider_midbrand {width: 65px; height: 65px; bottom: 140px;}
+	.shopping__slide-text span {font-size: 31px;}
+	.shopping__slide-text {font-size: 19px; left: 117px; bottom: 140px; letter-spacing: -0.05em;}
+	.shopping__slider_smallimage {display: none;}
+	.shopping__slider_bigbrand {width: 140px; height: 140px; left: 0; bottom: 0; right: auto;}
+	.shopping__scheme {width: 98px; height: 98px;}
+	.shopping__scheme svg {margin-top: -16px; margin-left: 2px; margin-bottom: 3px;}
+	
+	.activities__list {flex-wrap: wrap; margin-top: 48px;}
+	.activities__card {width: 50%; padding: 0 70px;}
+	.activities__button {margin-top: 17px; min-width: 180px; margin-bottom: 36px; font-size: 15px; min-height: 44px; line-height: 36px;}
+	
+	.megacard {padding-top: 4px;}
+	.megacard__topblock {margin-top: 55px;}
+	.megacard__about-right {padding: 0 39px 0 163px;}
+	.megacard__number {margin-top: 33px;}
+	.megacard__rotatedtext {transform-origin: 152% -67%;}
+	.megacard__toptext {margin-top: 7px; padding-left: 5px; font-weight: 500; max-width: 140px;}
+	.megacard__text {font-size: 16px; line-height: 1.5em; max-width: 192px;}
+	.megacard__toptext br {display: none;}
+	.megacard__topblock {padding-bottom: 30px;}
+	.megacard__about-left .megacard__topblock {padding-bottom: 79px;}
+	.megacard__button {margin-top: 40px; min-width: 190px;
+		&:last-of-type {margin-top: 20px; margin-left: 0;}
+	}
+	.megacard__course {margin-top: 37px; margin-left: -16px;}
+	.megacard__slider {padding-left: 28px; padding-right: auto;}
+	.megacard__slideoverflow {overflow: visible;}
+	.megacard__slidearrows {display: none;}
+	.megacard__slide {flex-shrink: 0; margin-left: 11px;
+		&:first-child {margin-left: 0;}
+	}
+	.megastyle .container {flex-direction: column; flex-wrap: wrap; height: 540px; align-content: space-between;}
+	.megastyle__leftside {width: 48.6%; height: 63.2%; overflow: hidden;}
+	.megastyle__back {position: relative;}
+	.megastyle__middle {width: 48.6%; height: 36.8%;}
+	.megastyle__name {font-size: 30px; padding: 30px 20px 30px 26px; min-height: auto;}
+	.megastyle__name br {display: none;}
+	.megastyle__front {margin-left: 0; height: 115px;}
+	.megastyle__front:after {height: 60px;}
+	.megastyle__front .megastyle__imagetext {top: 37px; transform: rotate(0);}
+	.megastyle__rightside {width: 48.6%; height: 100%;}
+	
+	.footer {padding-bottom: 48px;}
+	.footer__hr {transform: scaleX(2);}
+	.footer__hr_top {order: 1;}
+	.footer__menu {order: 2; width: 100%; margin: 0; text-align: center; padding: 33px 0; display: flex; justify-content: space-between;}
+	.footer__hr_bottom {order: 3;}
+	.footer__apps {order: 4; width: 50%; margin: 0;}
+	.footer__social {order: 5; width: 50%;}
+	.footer__copyright {order: 6; width: 50%;}
+	.footer__text {order: 7; width: 50%;}
+	.footer__menu li {margin-right: 0;}
+	.footer__app {text-align: left;}
+	.footer__app_google {margin-right: 65px;}
+	
+	.popup-city__map {display: none;}
+	.popup-city__city_moscow .popup-city__radiodiv, .popup-city__city_spb .popup-city__radiodiv {position: relative; left: auto; right: auto; top: auto; bottom: auto;}
+	.popup-city__logo {left: 50px;}
+	.popup-city__city {width: 42.2%;}
+	.popup-city__city_spb {width: 41.8%;}
+	.popup-city__city_other {width: 16%; padding-left: 0;}
+	.popup-city__city_moscow .popup-city__block {margin-top: 50px; margin-left: 3px; width: auto; height: auto;}
+	.popup-city__currentshop {margin-bottom: 10px;}
+	.popup-city__radiodiv label:before {left: 0 !important; top: 0 !important; opacity: 0 !important; border-color: #d8d8d8 !important; pointer-events: none !important;}
+	.popup-city__radiodiv label:hover:before {opacity: 1 !important; pointer-events: all !important;}
+	input[type="radio"]:not(old):checked + label:before {background-color: #e95a39 !important; border-color: #e95a39 !important; opacity: 1 !important; pointer-events: all !important;}
+	.popup-city__city label {margin-left: -25px; padding-left: 25px;}
+	.popup-city__radiodiv {min-width: 140px !important; width: auto !important; max-width: 174px;}
+	.popup-city__check {left: auto !important; bottom: auto !important; top: 5px !important; right: 0 !important;}
+	.popup-city__city_spb .popup-city__block {margin-top: 50px; margin-left: 3px;}
+	.popup-city__currentshop {margin-bottom: 12px;}
+	.popup-city__city_other .popup-city__block {margin-top: 50px; height: 430px;}
+	.popup-login {padding: 65px 0 100px;}
+	.popup-login__closeicon {top: -24px; right: -4px;}
+	.popup-login__heading {font-size: 24px; padding-left: 0;}
+	.popup-login__text, .popup-login__social {margin-left: 218px;}
+	.popup-menu .container {padding-left: 63px;}
+	.popup-menu__topmenu {padding-right: 60px;}
+	.popup-menu__middle {margin-top: 53px;}
+	.popup-menu .midcontainer {padding: 44px 0; padding-left: 63px;}
+}
+
+@media (max-width:760px) {
+	.container {width: 100% !important; padding: 0 20px; margin: 0;}
+	.header .container, .megacard .container {padding: 0;}
+	
+	.popup-city__shop-selection {display: none;}
+	.header__topmenu {display: none;}
+	.header__burger {width: 64px; height: 60px; background-color: #fff; position: relative; margin: 0;
+		img {position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+	}
+	.header__top {padding: 0;}
+	.header__logo {position: relative; top: 4px; left: 27px;}
+	.header__logo img {width: 110px; height: 33px;}
+	
+	.shopping {margin-top: -378px;}
+	.shopping__buttons {display: none;}
+	.shopping .container_imageblock {padding: 0; margin-top: 20px;}
+	.shopping__imageblock {position: relative;}
+	.shopping__imageblock-leftside {width: 100%;}
+	.shopping__imageblock-rightside {position: absolute; bottom: 0; right: 0; width: 100px; height: 60%;}
+	.shopping__slider_bigbrand {display: none;}
+	.shopping__slider_midbrand {display: none;}
+	.shopping__slider_topbrand {width: 82px; height: 82px;}
+	.shopping__imageblock {height: 340px;}
+	.shopping__slider_bottombrand {left: 63px;}
+	.shopping__slide-text {left: 63px; bottom: 88px;}
+	
+	.activities {padding-top: 199px;}
+	.activities__largeheading {height: 95px;}
+	.activities__list {margin-top: 25px;}
+	.activities__card-name {margin-top: 14px;}
+	.activities__card {width: 100%; padding: 0 39px;}
+	.activities__button {margin-bottom: 30px;}
+	.activities__card_green .activities__button {margin-bottom: 20px;}
+	.activities__card_yellow .activities__button {margin-bottom: 25px;}
+	.activities__card-time_empty {min-height: auto; margin-top: 0;}
+	
+	.megacard {padding-top: 10px;}
+	.megacard__about-left, .megacard__about-right {width: 100%; flex-shrink: 0;}
+	.megacard__image {display: none;}
+	.megacard__mobileimage {display: block; margin: auto;}
+	.megacard__heading {font-size: 24px;}
+	.megacard__topblock {margin-top: 24px; min-height: auto;}
+	.megacard__about-left {padding: 0 16px;}
+	.megacard__heading br {display: none;}
+	.megacard__about-left .megacard__topblock {padding-bottom: 30px;}
+	.megacard__text {max-width: 100%; margin-top: 37px; line-height: 1.65em;}
+	.megacard__button {max-width: 190px; display: block; margin: 38px auto 0;}
+	.megacard__button:last-of-type {margin: 10px auto 0;}
+	.megacard__slider {margin-top: -113px;}
+	
+	.megastyle__leftside {width: 100%; height: 228px;}
+	.megastyle__middle {width: 100%;}
+	.megastyle__name {padding: 17px 0; line-height: 1em;}
+	.megastyle__front {width: 100%;}
+	.megastyle__front .megastyle__imagetext {left: 58px;}
+	.megastyle__rightside {width: 100%; height: 397px; margin-top: 2px;}
+	.megastyle .container {height: auto;}
+	.megastyle__logo {width: 180px; height: 39px; left: 18px;}
+	.megastyle__text {top: 67px; left: 19px;}
+	
+	.footer {margin-top: 29px; padding-bottom: 28px;}
+	.footer__menu {flex-wrap: wrap; text-align: left; padding: 12px 0 25px; flex-direction: column; height: 142px; justify-content: flex-start;}
+	.footer__menu li {width: 50%; margin-top: 13px;}
+	.footer__apps {width: 100%; display: flex; justify-content: space-between; padding: 14px 0 21px; padding-right: 13px;}
+	.footer__social {width: 100%; border-top: 1px solid #e8eaea; border-bottom: 1px solid #e8eaea; display: flex; justify-content: space-between; margin: 0; padding: 20px 0 48px;}
+	.footer__app_google {margin: 0;}
+	.footer__copyright {width: 100%; margin-top: 26px; line-height: 1.6em;}
+	.footer__text {width: 100%; text-align: left; margin-top: 20px;}
+	
+	.popup-menu {padding: 20px 0 100px;}
+	.popup-menu__closeicon {top: 0; right: 20px;}
+	.popup-menu .container {padding-left: 25px;}
+	.popup-menu__topmenu {flex-wrap: wrap; margin-top: 16px; padding-right: 0;}
+	.popup-menu__topmenu li {margin: 0;}
+	.popup-menu__phone {text-align: left; flex: 1 0 100%; margin-top: 13px !important; letter-spacing: -0.03em;}
+	.popup-menu__middle {margin-top: 12px;}
+	.popup-menu .midcontainer {padding: 23px 0 0; flex-wrap: wrap;}
+	.popup-menu__bottommenu {width: 100%; padding: 0 25px;}
+	.popup-menu__bottommenu li {margin-top: 17px;}
+	.popup-menu__account {width: 100%; padding-left: 0; border-top: 1px solid #e8eaea; padding: 20px 0; padding: 9px 25px; margin-top: 24px;}
+	.popup-menu__bottom {padding-top: 23px;}
+	.popup-menu__search {margin-top: 23px;}
+	.popup-menu__logged {margin-top: 10px; width: 100%; position: relative;
+		li:last-child {position: absolute; right: 0; top: 0; margin-top: 2px;}
+	}
+	.popup-login {padding: 40px 0 100px;}
+	.popup-login__closeicon {top: -20px; right: 20px;}
+	.popup-login__heading {font-size: 20px;}
+	.popup-login__form {margin-top: 27px;}
+	.popup-login__field + div {margin-top: 21px;}
+	.popup-login__link_forgotpw {position: static; display: inline-block; margin-top: 43px;}
+	.popup-login .button {margin-top: 22px;}
+	.popup-login__text {line-height: 1.3em; margin-top: 23px;}
+	.popup-login__social {margin-top: 23px; display: flex; justify-content: space-between; padding: 0 30px;}
+	.popup-login__social li {margin: 0;}
 }

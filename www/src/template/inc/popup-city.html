@@ -1,25 +1,15 @@
-<div class="header-top">Привет, переименуй меня</div>
-
-
-
-<div class="h-mobile-hide">h-mobile-hide768</div>
-<div class="h-mobile-show">h-mobile-show768</div>
-
-
-<div class="h-tablet-hide">h-tablet-hide1024</div>
-<div class="h-tablet-show">h-tablet-show1024</div>
-
-
-<div class="h-desktop-wide-hide">h-desktop-wide-hide1280</div>
-<div class="h-desktop-wide-show">h-desktop-wide-show1280</div>
-
-
-<div class="popup-city">
+<div class="popup popup-city">
+	
 	<div class="container">
+		<div class="popup-city__shop-selection shop-selection">
+   			<img src="img/icons/icon_arrow_down.svg" alt="@@" width="13" height="9">
+    		<p class="popup-city__shop-name shop-name">Белая Дача</p>
+    		<p class="popup-city__shop-hours">8:00 – 22:00</p>
+    	</div>
 		<div class="popup-city__head">
 			<p class="popup-city__text">Выберите вашу МЕГУ:</p>
-			<img class="popup-city__logo" src="img/tmp/logo_mega.svg" alt="@@" width="104" height="31">
-			<a href="#" class="popup-city__closeicon">
+			<a href="#" class="popup-city__logo"><img  src="img/tmp/logo_mega.svg" alt="@@" width="104" height="31"></a>
+			<a href="#" class="popup__closeicon popup-city__closeicon">
 				<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.38 18.38" width="18" height="18" fill="#231f20"><defs></defs><title>icon_close</title><rect x="12" y="22" width="24" height="2" transform="translate(-24.04 9.9) rotate(-45)"/><rect x="12" y="22" width="24" height="2" transform="translate(8.49 -24.04) rotate(45)"/></svg>
 			</a>
 		</div>
@@ -28,7 +18,7 @@
 			<div class="popup-city__city popup-city__city_moscow">
 				<p class="popup-city__name">Москва:</p>
 				<div class="popup-city__block">
-					<img src="img/tmp/map_moscow.svg" alt="@@" width="197" height="257">
+					<img class="popup-city__map" src="img/tmp/map_moscow.svg" alt="@@" width="197" height="257">
 					<div class="popup-city__radiodiv popup-city__radiodiv_khimki">
 						<input type="radio" name="shop" id="moscow1" value="Химки"><label for="moscow1">Химки</label>
 						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
@@ -40,7 +30,7 @@
 						<p class="popup-city__currentshop">Моя МЕГА</p>
 					</div>
 					<div class="popup-city__radiodiv popup-city__radiodiv_bdacha">
-						<input type="radio" name="shop" id="moscow3" value="Белая Дача"><label for="moscow3">Белая Дача</label>
+						<input type="radio" name="shop" id="moscow3" value="Белая Дача" checked><label for="moscow3">Белая Дача</label>
 						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
 						<p class="popup-city__currentshop">Моя МЕГА</p>
 					</div>
@@ -50,7 +40,7 @@
 			<div class="popup-city__city popup-city__city_spb">
 				<p class="popup-city__name">Санкт-Петербург:</p>
 				<div class="popup-city__block">
-					<img src="img/tmp/map_spb.svg" alt="@@" width="232" height="222">
+					<img class="popup-city__map" src="img/tmp/map_spb.svg" alt="@@" width="232" height="222">
 					<div class="popup-city__radiodiv popup-city__radiodiv_parnas">
 						<input type="radio" name="shop" id="spb1" value="Парнас"><label for="spb1">Парнас</label>
 						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
@@ -114,7 +104,6 @@
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</div>
 </div>

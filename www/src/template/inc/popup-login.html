@@ -1,18 +1,18 @@
-<div class="popup-login">
+<div class="popup popup-login">
 	<div class="container">
-		<a href="#" class="popup-login__closeicon">
+		<a href="#" class="popup__closeicon popup-login__closeicon">
 			<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.38 18.38" width="18" height="18" fill="#231f20"><defs></defs><title>icon_close</title><rect x="12" y="22" width="24" height="2" transform="translate(-24.04 9.9) rotate(-45)"/><rect x="12" y="22" width="24" height="2" transform="translate(8.49 -24.04) rotate(45)"/></svg>
 		</a>
 		<p class="popup-login__heading">Вход</p>
-		<form action="" class="popup-login__form" method="post">
+		<form action="" class="popup-login__form" id="loginform" method="post">
 			<div class="popup-login__field">
 				<p class="popup-login__fieldname">Электронная почта</p>
-				<input type="email" name="email">
+				<input type="email" name="email" data-required>
 				<p class="popup-login__errortext">Вы не ввели электронную почту</p>
 			</div>
-			<div class="popup-login__field error">
+			<div class="popup-login__field">
 				<p class="popup-login__fieldname">Пароль</p>
-				<input type="password" name="password">
+				<input type="password" name="password" data-required>
 				<p class="popup-login__errortext">Вы не ввели пароль</p>
 				<a class="popup-login__link popup-login__link_forgotpw" href="#">Забыл пароль</a>
 			</div>

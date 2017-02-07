@@ -13,12 +13,237 @@
 
 </head>
 <body>
+ <div class="overlay"></div>
  
-	<!--  //= template/inc/popup-login.html
-	 //= template/inc/popup-search.html
-	 //= template/inc/popup-city.html
-	 //= template/inc/popup-menu.html -->
+ 
+	 <!-- //= template/inc/popup-login.html -->
+<div class="popup popup-login">
+	<div class="container">
+		<a href="#" class="popup__closeicon popup-login__closeicon">
+			<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.38 18.38" width="18" height="18" fill="#231f20"><defs></defs><title>icon_close</title><rect x="12" y="22" width="24" height="2" transform="translate(-24.04 9.9) rotate(-45)"/><rect x="12" y="22" width="24" height="2" transform="translate(8.49 -24.04) rotate(45)"/></svg>
+		</a>
+		<p class="popup-login__heading">Вход</p>
+		<form action="" class="popup-login__form" id="loginform" method="post">
+			<div class="popup-login__field">
+				<p class="popup-login__fieldname">Электронная почта</p>
+				<input type="email" name="email" data-required>
+				<p class="popup-login__errortext">Вы не ввели электронную почту</p>
+			</div>
+			<div class="popup-login__field">
+				<p class="popup-login__fieldname">Пароль</p>
+				<input type="password" name="password" data-required>
+				<p class="popup-login__errortext">Вы не ввели пароль</p>
+				<a class="popup-login__link popup-login__link_forgotpw" href="#">Забыл пароль</a>
+			</div>
+			<button class="button button_orange">Войти</button>
+			<a class="popup-login__link" href="#">Регистрация</a>
+		</form>
+		<p class="popup-login__text">Войдите или зарегистрируйтесь через соц. сети</p>
+		<ul class="popup-login__social">
+			<li><a href="#"><img src="img/icons/icon_facebook_2.svg" alt="@@" width="44" height="44"></a></li>
+			<li><a href="#"><img src="img/icons/icon_vkontakte_2.svg" alt="@@" width="44" height="44"></a></li>
+			<li><a href="#"><img src="img/icons/icon_odnoklassniki.svg" alt="@@" width="44" height="44"></a></li>
+		</ul>
+	</div>
+</div>
+ 
+ 
+	 <!-- //= template/inc/popup-search.html -->
+<div class="popup popup-search">
+	<div class="container">
+		<div class="popup-search__searchfield">
+			<p class="popup-search__fieldname">Поиск:</p>
+			<input type="text" value="джинсы" name="search">
+			<a href="#" class="popup-search__searchicon">
+				<svg id="Layer_3" data-name="Layer 3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 19.02 19.08" width="18" height="18" fill="none" stroke="#e8522f" stroke-miterlimit="10" stroke-width="1.5px"><defs></defs><title>icon_search</title><circle cx="7.48" cy="7.48" r="6.73"/><line x1="12.13" y1="12.19" x2="18.49" y2="18.55"/></svg>
+			</a>
+			<a href="#" class="popup__closeicon popup-search__closeicon">
+				<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.38 18.38" width="18" height="18" fill="#231f20"><defs></defs><title>icon_close</title><rect x="12" y="22" width="24" height="2" transform="translate(-24.04 9.9) rotate(-45)"/><rect x="12" y="22" width="24" height="2" transform="translate(8.49 -24.04) rotate(45)"/></svg>
+			</a>
+		</div>
+	</div>
+</div>
+ 
+ 
+	 <!-- //= template/inc/popup-city.html -->
+<div class="popup popup-city">
+	
+	<div class="container">
+		<div class="popup-city__shop-selection shop-selection">
+   			<img src="img/icons/icon_arrow_down.svg" alt="@@" width="13" height="9">
+    		<p class="popup-city__shop-name shop-name">Белая Дача</p>
+    		<p class="popup-city__shop-hours">8:00 – 22:00</p>
+    	</div>
+		<div class="popup-city__head">
+			<p class="popup-city__text">Выберите вашу МЕГУ:</p>
+			<a href="#" class="popup-city__logo"><img  src="img/tmp/logo_mega.svg" alt="@@" width="104" height="31"></a>
+			<a href="#" class="popup__closeicon popup-city__closeicon">
+				<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.38 18.38" width="18" height="18" fill="#231f20"><defs></defs><title>icon_close</title><rect x="12" y="22" width="24" height="2" transform="translate(-24.04 9.9) rotate(-45)"/><rect x="12" y="22" width="24" height="2" transform="translate(8.49 -24.04) rotate(45)"/></svg>
+			</a>
+		</div>
+		<div class="popup-city__cities">
 
+			<div class="popup-city__city popup-city__city_moscow">
+				<p class="popup-city__name">Москва:</p>
+				<div class="popup-city__block">
+					<img class="popup-city__map" src="img/tmp/map_moscow.svg" alt="@@" width="197" height="257">
+					<div class="popup-city__radiodiv popup-city__radiodiv_khimki">
+						<input type="radio" name="shop" id="moscow1" value="Химки"><label for="moscow1">Химки</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_tstan">
+						<input type="radio" name="shop" id="moscow2" value="Теплый стан"><label for="moscow2">Теплый стан</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_bdacha">
+						<input type="radio" name="shop" id="moscow3" value="Белая Дача" checked><label for="moscow3">Белая Дача</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="popup-city__city popup-city__city_spb">
+				<p class="popup-city__name">Санкт-Петербург:</p>
+				<div class="popup-city__block">
+					<img class="popup-city__map" src="img/tmp/map_spb.svg" alt="@@" width="232" height="222">
+					<div class="popup-city__radiodiv popup-city__radiodiv_parnas">
+						<input type="radio" name="shop" id="spb1" value="Парнас"><label for="spb1">Парнас</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_dybenko">
+						<input type="radio" name="shop" id="spb2" value="Дыбенко"><label for="spb2">Дыбенко</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="popup-city__city popup-city__city_other">
+				<p class="popup-city__name popup-city__name_other">Другие города:</p>
+				<div class="popup-city__block">
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="ekaterinburg" value="Екатеринбург"><label for="ekaterinburg">Екатеринбург</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="kazan" value="Казань"><label for="kazan">Казань</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="adygea" value="Адыгея-Кубань"><label for="adygea">Адыгея-Кубань</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="nnovgorod" value="Нижний Новгород"><label for="nnovgorod">Нижний Новгород</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="novosibirsk" value="Новосибирск"><label for="novosibirsk">Новосибирск</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="omsk" value="Омск"><label for="omsk">Омск</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="rostov" value="Ростов-на-Дону"><label for="rostov">Ростов-на-Дону</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="samara" value="Самара"><label for="samara">Самара</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+					<div class="popup-city__radiodiv popup-city__radiodiv_other">
+						<input type="radio" name="shop" id="ufa" value="Уфа"><label for="ufa">Уфа</label>
+						<img class="popup-city__check" src="img/icons/icon_check.svg" alt="@@" width="19" height="14">
+						<p class="popup-city__currentshop">Моя МЕГА</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+	<!--  //= template/inc/popup-menu.html -->
+<div class="popup popup-menu">
+   	<div class="container">
+   		<a href="#" class="popup__closeicon popup-menu__closeicon">
+			<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 18.38 18.38" width="18" height="18" fill="#231f20"><defs></defs><title>icon_close</title><rect x="12" y="22" width="24" height="2" transform="translate(-24.04 9.9) rotate(-45)"/><rect x="12" y="22" width="24" height="2" transform="translate(8.49 -24.04) rotate(45)"/></svg>
+		</a>
+   		<!-- Выбор магазина -->
+   		<div class="popup-menu__shop-selection shop-selection">
+   			<img src="img/icons/icon_arrow_down.svg" alt="@@" width="13" height="9">
+    		<p class="popup-menu__shop-name shop-name">Белая Дача</p>
+    		<p class="popup-menu__shop-hours">8:00 – 22:00</p>
+    	</div>
+   		<!-- Верхнее меню -->
+   		<ul class="popup-menu__topmenu">
+   			<li>
+   				<a href="#"><svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.86 23.73" width="24" height="24" fill="none" stroke="#ee836a" stroke-linecap="round" stroke-linejoin="round" stroke-width:="1.3px"><defs></defs><title>icon_scheme</title><polyline points="21.24 16.2 23.21 16.57 23.21 1.65 17.19 0.65 11.38 3.3 6.48 1.07 0.65 3.26 0.65 18.18 6.48 15.98 11.16 18.07"/><line x1="6.86" y1="3.93" x2="6.86" y2="13.4"/><line x1="11.49" y1="5.77" x2="11.49" y2="9.38"/><line x1="17.81" y1="3.26" x2="17.81" y2="8.05"/><path d="M1084.62,1829.33c0,2.27-4.13,8.5-4.13,8.5s-4.13-6.24-4.13-8.5A4.13,4.13,0,0,1,1084.62,1829.33Z" transform="translate(-1064.67 -1814.75)"/><ellipse cx="15.82" cy="14.27" rx="1.02" ry="1.02"/></svg>Схема МЕГИ</a>
+   			</li>
+   			<li>
+   				<a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14.17 23.84" width="14" height="24" fill="none" stroke="#ee836a" stroke-linecap="round" stroke-linejoin="round" stroke-width:="1.3px"><defs></defs><title>icon_pin</title><path d="M962.44,1822.64c0,3.55-6.43,13.33-6.43,13.33s-6.43-9.78-6.43-13.33A6.43,6.43,0,0,1,962.44,1822.64Z" transform="translate(-948.92 -1815.56)"/><circle cx="7.08" cy="6.38" r="1.99"/><path d="M959,1834.79c1.85,0.36,3.1,1.05,3.1,1.84,0,1.17-2.72,2.11-6.08,2.11s-6.08-.94-6.08-2.11c0-.79,1.26-1.49,3.12-1.85" transform="translate(-948.92 -1815.56)"/></svg>Как добраться?</a>
+   			</li>
+   			<li class="popup-menu__phone">
+   				<a href="tel:+74952211390">+7 495 221-13-90</a>
+   			</li>
+   		</ul>
+	</div>
+   		<!-- Средняя часть -->
+   		<div class="popup-menu__middle">
+   			<div class="container midcontainer">
+   				<!-- Нижнее меню -->
+   				<ul class="popup-menu__bottommenu">
+   					<li><a href="#">Магазины</a></li>
+   					<li><a href="#">Еда</a></li>
+   					<li><a href="#">Развлечения</a></li>
+   					<li><a href="#">MEGACARD</a></li>
+   					<li><a href="#">Акции и события</a></li>
+   					<li><a href="#">Высшая Школа Шоппинга</a></li>
+   					<li><a href="#">Детский клуб</a></li>
+   					<li><a href="#">Подарочная карта</a></li>
+   				</ul>
+   				<!-- Вход в личный кабинет -->
+   				<div class="popup-menu__account">
+   					<a href="#" class="button popup-menu__login button_login"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.83 23.83" width="24" height="24" fill="none" stroke="#231f20"><defs></defs><title>icon_login</title><path d="M1526,345.07a11.26,11.26,0,1,0,11.26,11.26A11.28,11.28,0,0,0,1526,345.07Z" transform="translate(-1514.11 -344.42)"/><path d="M1533.52,364.74c-2.44-1-4.82-2.19-5-2.92v-1a6.25,6.25,0,0,0,1.47-2.69,1.6,1.6,0,0,0,.31-2.32v-2.21c0-2.28-1.27-3.84-4.17-3.84s-4.18,1.56-4.18,3.84v2.21a1.6,1.6,0,0,0,.31,2.32,6.25,6.25,0,0,0,1.47,2.69v1c-0.23.74-2.45,1.84-4.93,2.87" transform="translate(-1514.11 -344.42)"/></svg>Войти</a>
+   					<div class="popup-menu__logged logged">
+   						<a href="#" class="popup-menu__user"><span class="popup-menu__avatar"><img src="img/tmp/avatar.png" alt="@@"></span>Станислава</a>
+   						<ul class="popup-menu__user-actions">
+   							<li><a href="#">Интересы</a></li>
+   							<li><a href="#">Профиль</a></li>
+   							<li><a href="#">Настройки</a></li>
+   							<li><a class="logout" href="#">Выйти</a></li>
+   						</ul>
+   					</div>
+   				</div>
+   			</div>
+   		</div>
+   		<!-- Нижняя часть -->
+   		<div class="popup-menu__bottom">
+   			<div class="container">
+   				<a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.83 17.3" width="23" height="17" fill="none" stroke="#ee836a"><defs><clipPath id="clip-path"><path d="M311.16,391.15"/></clipPath><clipPath id="clip-path-2"><path d="M332.79,405.25"/></clipPath><clipPath id="clip-path-3" transform="translate(-310.56 -389.55)"><path d="M332.79,397.84v6.37a2,2,0,0,1-2,2H313.2a2,2,0,0,1-2-2v-6.41"/></clipPath><clipPath id="clip-path-4" transform="translate(-310.56 -389.55)"><path d="M311.16,398.57V392.2a2,2,0,0,1,2-2h17.54a2,2,0,0,1,2,2v6.41"/></clipPath></defs><title>icon_mail</title><g><path d="M311.16,391.15a0.68,0.68,0,0,1,.68-0.68h20.27a0.68,0.68,0,0,1,.68.68v13.05a2,2,0,0,1-2,2H313.2a2,2,0,0,1-2-2V391.15h0Z" transform="translate(-310.56 -389.55)"/></g><path d="M311.16,391.15" transform="translate(-310.56 -389.55)"/><path d="M332.79,397.84v6.37a2,2,0,0,1-2,2H313.2a2,2,0,0,1-2-2v-6.41" transform="translate(-310.56 -389.55)"/><g><path d="M332.79,405.25a0.68,0.68,0,0,1-.68.68H311.84a0.68,0.68,0,0,1-.68-0.68V392.2a2,2,0,0,1,2-2h17.54a2,2,0,0,1,2,2v13.05h0Z" transform="translate(-310.56 -389.55)"/></g><path d="M332.79,405.25" transform="translate(-310.56 -389.55)"/><path d="M311.16,398.57V392.2a2,2,0,0,1,2-2h17.54a2,2,0,0,1,2,2v6.41" transform="translate(-310.56 -389.55)"/><polyline points="1.12 1.39 11.78 9.38 21.71 1.39"/></svg>Подписаться на новости</a>
+   				<div class="popup-menu__search">
+   					<input type="text" name="searchfield" placeholder="Поиск">
+   					<a href="#" class="popup-menu__searchicon"><img src="img/icons/icon_search.svg" alt="@@" width="18" height="18"></a>
+   				</div>
+   			</div>
+   		</div>
+   	</div>
+   
+   
     <!-- Шапка -->
   <!--   //= template/header.html -->
     <!-- /Шапка -->
@@ -30,11 +255,7 @@
     	<div class="header__top">
     		<!-- Логотип -->
     		<a href="#" class="header__logo"><img src="img/tmp/logo_mega.svg" alt="@@" width="146" height="44"></a>
-    		<!-- Выбор магазина -->
-    		<div class="header__shop-selection">
-    			<p class="header__shop-name">Белая Дача</p>
-    			<p class="header__shop-hours">8:00 – 22:00</p>
-    		</div>
+    		
     		<!-- Верхнее меню -->
     		<ul class="header__topmenu">
     			<li>
@@ -50,14 +271,14 @@
     				<a href="#"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 22.83 17.3" width="23" height="17"><defs><style>.cls-1,.cls-2,.cls-3,.cls-5,.cls-6{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.2px;}.cls-1,.cls-2,.cls-3{clip-rule:evenodd;}.cls-2{clip-path:url(#clip-path);}.cls-3{clip-path:url(#clip-path-2);}.cls-4{clip-path:url(#clip-path-3);}.cls-6{fill-rule:evenodd;}.cls-7{clip-path:url(#clip-path-4);}</style><clipPath id="clip-path"><path class="cls-1" d="M311.16,391.15"/></clipPath><clipPath id="clip-path-2"><path class="cls-1" d="M332.79,405.25"/></clipPath><clipPath id="clip-path-3" transform="translate(-310.56 -389.55)"><path class="cls-2" d="M332.79,397.84v6.37a2,2,0,0,1-2,2H313.2a2,2,0,0,1-2-2v-6.41"/></clipPath><clipPath id="clip-path-4" transform="translate(-310.56 -389.55)"><path class="cls-3" d="M311.16,398.57V392.2a2,2,0,0,1,2-2h17.54a2,2,0,0,1,2,2v6.41"/></clipPath></defs><title>icon_mail</title><g class="cls-4"><path class="cls-5" d="M311.16,391.15a0.68,0.68,0,0,1,.68-0.68h20.27a0.68,0.68,0,0,1,.68.68v13.05a2,2,0,0,1-2,2H313.2a2,2,0,0,1-2-2V391.15h0Z" transform="translate(-310.56 -389.55)"/></g><path class="cls-6" d="M311.16,391.15" transform="translate(-310.56 -389.55)"/><path class="cls-6" d="M332.79,397.84v6.37a2,2,0,0,1-2,2H313.2a2,2,0,0,1-2-2v-6.41" transform="translate(-310.56 -389.55)"/><g class="cls-7"><path class="cls-5" d="M332.79,405.25a0.68,0.68,0,0,1-.68.68H311.84a0.68,0.68,0,0,1-.68-0.68V392.2a2,2,0,0,1,2-2h17.54a2,2,0,0,1,2,2v13.05h0Z" transform="translate(-310.56 -389.55)"/></g><path class="cls-6" d="M332.79,405.25" transform="translate(-310.56 -389.55)"/><path class="cls-6" d="M311.16,398.57V392.2a2,2,0,0,1,2-2h17.54a2,2,0,0,1,2,2v6.41" transform="translate(-310.56 -389.55)"/><polyline class="cls-5" points="1.12 1.39 11.78 9.38 21.71 1.39"/></svg>Подписаться</a>
     			</li>
     			<li class="header__action">
-    				<a href="#"><img src="img/icons/icon_search.svg" alt="@@" width="18" height="18">Поиск</a>
+    				<a href="#searchbar"><img src="img/icons/icon_search.svg" alt="@@" width="18" height="18">Поиск</a>
     			</li>
     		</ul>
     		<!-- Вход в личный кабинет -->
     		<div class="header__account">
-    			<a href="#" class="button header__login">
+    			<a href="#" class="button header__login button_login">
     				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.83 23.83" width="24" height="24" fill="none" stroke="#231f20"><defs></defs><title>icon_login</title><path d="M1526,345.07a11.26,11.26,0,1,0,11.26,11.26A11.28,11.28,0,0,0,1526,345.07Z" transform="translate(-1514.11 -344.42)"/><path d="M1533.52,364.74c-2.44-1-4.82-2.19-5-2.92v-1a6.25,6.25,0,0,0,1.47-2.69,1.6,1.6,0,0,0,.31-2.32v-2.21c0-2.28-1.27-3.84-4.17-3.84s-4.18,1.56-4.18,3.84v2.21a1.6,1.6,0,0,0,.31,2.32,6.25,6.25,0,0,0,1.47,2.69v1c-0.23.74-2.45,1.84-4.93,2.87" transform="translate(-1514.11 -344.42)"/></svg>Войти</a>
-    			<div class="header__logged">
+    			<div class="header__logged logged">
     				<a href="#" class="header__user"><span class="header__avatar"><img src="img/tmp/avatar.png" alt="@@"></span>Станислава</a>
     				<ul class="header__user-actions">
     					<li><a href="#">Интересы</a></li>
@@ -88,17 +309,13 @@
 <!------------------------------------------------>
 
 <section class="firstscreen">
-	<div class="firstscreen__image-slider">
-		<div class="firstscreen__image-wrapper">
-			<div class="firstscreen__image-slide">
-				<img src="img/tmp/slide1.jpg" alt="@@">
+	<div class="firstscreen__leftside">
+		<div class="firstscreen__image-slider">
+			<div class="firstscreen__image-wrapper">
+				<div class="firstscreen__image-slide">
+					<img src="img/tmp/slide1.jpg" alt="@@">
+				</div>
 			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="firstscreen__slider-arrows">
-			<img class="prev" src="img/icons/icon_slidearrow.svg" alt="@@" width="10" height="17">
-			<img class="next" src="img/icons/icon_slidearrow.svg" alt="@@" width="10" height="17">
 		</div>
 		<div class="firstscreen__rotatedtext-slider">
 			<div class="firstscreen__rotatedtext-wrapper">
@@ -107,12 +324,18 @@
 				</div>
 			</div>
 		</div>
-		<div class="firstcreen__textblock">
+	</div>
+	<div class="container">
+		<div class="firstscreen__slider-arrows">
+			<svg class="prev" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.23 16.96" width="10" height="17" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5px"><title>icon_slidearrow</title><polyline points="0.75 0.75 8.48 8.48 0.75 16.21"/></svg>
+			<svg class="next" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 9.23 16.96" width="10" height="17" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5px"><title>icon_slidearrow</title><polyline points="0.75 0.75 8.48 8.48 0.75 16.21"/></svg>
+		</div>
+		<div class="firstscreen__textblock">
 			<div class="firstscreen__text-slider">
 				<div class="firstscreen__text-wrapper">
 					<div class="firstscreen__text-slide">
-						<p class="firstscreen__slide-heading">Local <span>chefs</span> seafood restauraunt</p>
-						<p class="firstscreen__slide-text">Отличная новость для поклонников средиземноморской кухни!</p>
+						<p class="firstscreen__slide-heading">Local <span>chefs</span><br> seafood restauraunt</p>
+						<p class="firstscreen__slide-text">Отличная новость для поклонников<br> средиземноморской кухни!</p>
 					</div>
 				</div>
 			</div>
@@ -125,11 +348,11 @@
 			</div>
 		</div>
 		<ul class="firstscreen__slider-dots">
-			<li class="dot"></li>
-			<li class="dot active"></li>
-			<li class="dot"></li>
-			<li class="dot"></li>
-			<li class="dot"></li>
+			<li></li>
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
 		</ul>
 	</div>
 </section>
@@ -198,6 +421,8 @@
 				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21.24 21.24" width="21" height="21" fill="#ef9780" fill-rule="evenodd"><defs></defs><title>ion_sale</title><path d="M294.12,395.89l9.28,9.28,12-12v-5.72l-3.52-3.56H305.6l-11.48,12h0Zm15.77-5.24a1.72,1.72,0,1,0-1.72-1.72,1.72,1.72,0,0,0,1.72,1.72h0Zm-6.13,3.17a1,1,0,1,0-1-1,1,1,0,0,0,1,1h0Zm0,5.43a1,1,0,1,0-1-1,1,1,0,0,0,1,1h0ZM299.2,395h9.17v1H299.2v-1h0Z" transform="translate(-294.12 -383.93)"/></svg>134 акции</a>
 			<a href="#" class="button button_white">12 событий</a>
 		</div>
+	</div>
+	<div class="container container_imageblock">
 		<div class="shopping__imageblock">
 			<div class="shopping__imageblock-leftside">
 				<div class="shopping__slider shopping__slider_image">
@@ -328,14 +553,14 @@
 				<div class="activities__card-image"><img src="img/icons/icon_coffee.svg" alt="@@" width="34" height="41"></div>
 				<p class="activities__card-name">Попить кофе и перекусить</p>
 				<p class="activities__card-text">Устали? Подкрепитесь в наших ресторанах и кафе</p>
-				<p class="activities__card-time"></p>
+				<p class="activities__card-time activities__card-time_empty"></p>
 				<a href="#" class="button button_bordered activities__button">Рестораны и кафе</a>
 			</li>
 			<li class="activities__card activities__card_yellow">
 				<div class="activities__card-image"><img src="img/icons/icon_dummy.svg" alt="@@" width="35" height="35"></div>
 				<p class="activities__card-name">Сходить с детьми</p>
 				<p class="activities__card-text">Приезжайте всей семьей, развлечения найдутся каждому</p>
-				<p class="activities__card-time"></p>
+				<p class="activities__card-time activities__card-time_empty"></p>
 				<a href="#" class="button button_bordered activities__button">Детские площадки</a>
 			</li>
 			<li class="activities__card activities__card_blue">
@@ -353,37 +578,33 @@
 
 <section class="megacard">
 	<div class="container">
-		<div class="maegacard__mainslider">
-			<div class="maegacard__mainwrapper">
-				<div class="megacard__about">
-					<div class="megacard__about-left">
-						<div class="megacard__topblock">
-				          <p class="megacard__heading">Копите баллы, <br>получайте бонусы, <br>экономьте</p>
-				        </div>
-				        <img src="img/tmp/megacard.png" alt="@@" class="megacard__cardimage">
-						<p class="megacard__text">Карта, которой можно расплачиваться во&nbsp;всем мире и получать за покупки бонусные баллы.</p>
-						<a href="#" class="button button_white megacard__button">Получить карту</a>
-						<a href="#" class="button button_white_bordered megacard__button">Узнать больше о карте</a>
-					</div>
-					<div class="megacard__about-right">
-						<div class="megacard__topblock">
-				          <p class="megacard__number">54</p>
-				          <p class="megacard__rotatedtext">магазина</p>
-				          <p class="megacard__toptext">принимают<br> бонусные карты</p>
-				        </div>
-						<p class="megacard__text">Приходите в МЕГУ и тратьте полученные баллы на то, что вам нравится, в&nbsp;магазинах — участниках программы.</p>
-						<div class="megacard__course">
-							<p><span>1</span><br>балл</p>
-				          <span>=</span>
-				          <p class="megacard__course-bordered"><span>1</span><br>рубль</p>
-				        </div>
-					</div>
-					<img class="megacard__image" src="img/tmp/hand.png" alt="@@">
-				</div>
+		<div class="megacard__about">
+			<div class="megacard__about-left">
+				<div class="megacard__topblock">
+		          <p class="megacard__heading">Копите баллы, <br>получайте бонусы, <br>экономьте</p>
+		        </div>
+		        <img class="megacard__mobileimage" src="img/tmp/megacard.png" alt="@@" class="megacard__cardimage">
+				<p class="megacard__text">Карта, которой можно расплачиваться во&nbsp;всем мире и получать за покупки бонусные баллы.</p>
+				<a href="#" class="button button_white megacard__button">Получить карту</a>
+				<a href="#" class="button button_white_bordered megacard__button">Узнать больше о карте</a>
 			</div>
+			<div class="megacard__about-right">
+				<div class="megacard__topblock">
+		          <p class="megacard__number">54</p>
+		          <p class="megacard__rotatedtext">магазина</p>
+		          <p class="megacard__toptext">принимают<br> бонусные карты</p>
+		        </div>
+				<p class="megacard__text">Приходите в МЕГУ и&nbsp;тратьте полученные баллы на то, что вам нравится, в&nbsp;магазинах — участниках программы.</p>
+				<div class="megacard__course">
+					<p><span>1</span><br>балл</p>
+		          <span>=</span>
+		          <p class="megacard__course-bordered"><span>1</span><br>рубль</p>
+		        </div>
+			</div>
+			<img class="megacard__image" src="img/tmp/hand.png" alt="@@">
 		</div>
 		<div class="megacard__slider">
-			<div class="maegacard__slideoverflow">
+			<div class="megacard__slideoverflow">
 				<div class="megacard__wrapper">
 					<div class="megacard__slide">
 						<a href="#" class="megacard__slide-card">
@@ -461,7 +682,7 @@
 
 <footer class="footer">
     <div class="container">
-    <hr class="footer__hr">
+    <hr class="footer__hr footer__hr_top">
     		<ul class="footer__menu">
     			<li><a href="#">Компания</a></li>
     			<li><a href="#">Карьера</a></li>
@@ -484,7 +705,7 @@
     				<svg class="icon_yt" id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.25 49.25" width="29" height="29" fill="#d2d5d6"><defs></defs><title>icon_youtube</title><polygon points="14.11 26.7 15.89 26.7 15.89 35.55 17.62 35.55 17.62 26.7 19.4 26.7 19.4 25.19 14.11 25.19 14.11 26.7"/><path d="M205.49,605.53a0.78,0.78,0,0,0,.56-0.19,0.7,0.7,0,0,0,.21-0.53v-4.59a0.54,0.54,0,0,0-.21-0.45,0.84,0.84,0,0,0-.55-0.17,0.75,0.75,0,0,0-.51.17,0.56,0.56,0,0,0-.2.45v4.59a0.73,0.73,0,0,0,.18.53A0.69,0.69,0,0,0,205.49,605.53Z" transform="translate(-180.8 -586.2)"/><path d="M209.29,614a1.52,1.52,0,0,0-.71.18,2.38,2.38,0,0,0-.65.53v-3.34h-1.54v10.37h1.54v-0.59a2,2,0,0,0,.65.52,1.83,1.83,0,0,0,.8.17,1.27,1.27,0,0,0,1-.43,1.91,1.91,0,0,0,.36-1.25v-4.24a2.26,2.26,0,0,0-.38-1.43A1.32,1.32,0,0,0,209.29,614Zm-0.09,6a0.84,0.84,0,0,1-.13.53,0.5,0.5,0,0,1-.41.16,0.9,0.9,0,0,1-.37-0.08,1.27,1.27,0,0,1-.36-0.27v-4.76a1.07,1.07,0,0,1,.31-0.23,0.72,0.72,0,0,1,.32-0.08,0.59,0.59,0,0,1,.48.2,0.93,0.93,0,0,1,.16.59V620Z" transform="translate(-180.8 -586.2)"/><path d="M203.7,619.92a2.16,2.16,0,0,1-.47.41,0.87,0.87,0,0,1-.43.16,0.38,0.38,0,0,1-.31-0.12,0.65,0.65,0,0,1-.09-0.39V614.1h-1.53v6.39a1.65,1.65,0,0,0,.27,1,1,1,0,0,0,.8.34,1.86,1.86,0,0,0,.89-0.24,3.43,3.43,0,0,0,.88-0.71v0.84h1.53V614.1H203.7v5.81Z" transform="translate(-180.8 -586.2)"/><path d="M205.42,586.2A24.63,24.63,0,1,0,230,610.82,24.63,24.63,0,0,0,205.42,586.2Zm4,12.16h1.72v6.46a0.68,0.68,0,0,0,.11.43,0.42,0.42,0,0,0,.35.14,1,1,0,0,0,.48-0.18,2.33,2.33,0,0,0,.53-0.46v-6.39h1.72v8.42h-1.72v-0.93a3.62,3.62,0,0,1-1,.78,2.17,2.17,0,0,1-1,.27,1.08,1.08,0,0,1-.9-0.38,1.77,1.77,0,0,1-.3-1.13v-7ZM203,600.28a1.94,1.94,0,0,1,.69-1.56,2.85,2.85,0,0,1,1.87-.58,2.54,2.54,0,0,1,1.75.61,2,2,0,0,1,.68,1.58v4.35a2.19,2.19,0,0,1-.67,1.7,2.63,2.63,0,0,1-1.84.61,2.55,2.55,0,0,1-1.81-.63,2.24,2.24,0,0,1-.68-1.71v-4.37Zm-4.69-4.92,1.26,4.56h0.12l1.2-4.56h2L200.61,602v4.74h-1.94v-4.53l-2.31-6.89h2Zm22.54,24a5.52,5.52,0,0,1-5.52,5.52H196.17a5.52,5.52,0,0,1-5.52-5.52V615a5.52,5.52,0,0,1,5.52-5.52h19.18a5.52,5.52,0,0,1,5.52,5.52v4.44Z" transform="translate(-180.8 -586.2)"/><path d="M213.9,613.92a2.3,2.3,0,0,0-1.67.63,2.15,2.15,0,0,0-.65,1.62v3.44a2.44,2.44,0,0,0,.59,1.73,2.11,2.11,0,0,0,1.62.63,2.28,2.28,0,0,0,1.71-.59,2.45,2.45,0,0,0,.58-1.77V619.2h-1.57v0.35a1.64,1.64,0,0,1-.15.87,0.63,0.63,0,0,1-.53.2,0.57,0.57,0,0,1-.52-0.23,1.68,1.68,0,0,1-.15-0.84v-1.44h2.92v-2a2.29,2.29,0,0,0-.56-1.67A2.15,2.15,0,0,0,213.9,613.92Zm0.6,3h-1.35v-0.77a1.12,1.12,0,0,1,.16-0.69,0.61,0.61,0,0,1,.52-0.21,0.59,0.59,0,0,1,.51.21,1.12,1.12,0,0,1,.16.69v0.77Z" transform="translate(-180.8 -586.2)"/></svg>
     			</a></li>
     		</ul>
-      <hr class="footer__hr">
+      <hr class="footer__hr footer__hr_bottom">
     		<p class="footer__copyright">© 2010–2016 «ИКЕА Сентерс Рус Менеджмент»</p>
     		<div class="footer__apps">
     			<div class="footer__app footer__app_google">
